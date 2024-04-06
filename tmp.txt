@@ -1,3 +1,36 @@
+__________________________________________________________________________________________________________
+ANIMALS:
+
+Red Deer (Cervus elaphus): These majestic creatures are among the largest deer species and can be spotted in forested areas of Valtellina.
+
+Roe Deer (Capreolus capreolus): Smaller than red deer, roe deer are adaptable and can be found in mixed landscapes of woodlands and fields.
+
+Chamois (Rupicapra rupicapra): A type of goat-antelope, chamois are well-adapted to living in the mountainous terrain of Valtellina.
+
+Ibex (Capra ibex): The ibex, or Alpine ibex, is known for its impressive curved horns and is primarily found in the high rocky areas of the Alps.
+
+Marmot (Marmota marmota): These large ground squirrels are a common sight in Alpine meadows, known for their burrowing habits and loud calls.
+
+Eurasian Lynx (Lynx lynx): A rare and elusive predator, the Eurasian lynx roams the remote forests of Valtellina, preying on ungulates and other small mammals.
+
+Golden Eagle (Aquila chrysaetos): This magnificent bird of prey is one of the most emblematic species of the Alpine region, often seen soaring above the mountains.
+
+Brown Bear (Ursus arctos): Although sightings are rare and mostly confined to the more secluded areas, the brown bear is part of the region’s fauna.
+
+Alpine Salamander (Salamandra atra): Unique to the Alpine region, this salamander is black, lives at high altitudes, and is viviparous, giving birth to fully formed young.
+
+European Adder (Vipera berus): This venomous snake is found in a variety of habitats including forests, meadows, and rocky slopes.
+
+Wallcreeper (Tichodroma muraria): A small bird with striking crimson wings, the wallcreeper frequents rocky cliffs and can be spotted scaling walls like a mouse.
+
+
+
+
+
+
+__________________________________________________________________________________________________________
+IDEAS:
+
 1. Geology and Formation
 The Creation of the Alps: Detail the geological forces at play over millions of years that led to the formation of the Alps. Include information about tectonic plates and the process of mountain formation.
 Famous Peaks: Highlight some of the most famous peaks, such as Mont Blanc, the Matterhorn, and the Eiger. You could include their heights, climbing history, and any interesting stories associated with them.

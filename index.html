@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alps</title>
+    <meta name="author" content="Alexander Ivanov" />
+    <link rel="icon" href="./src/img/favicon.ico" type="image/x-icon" />
+
+    <meta
+      name="description"
+      content="Discover Valtellina through our interactive website, showcasing the stunning landscapes, unique wildlife, and rich culture of this enchanting Italian valley. Experience engaging features like parallax scrolling and animal sliders, designed to bring the beauty of Valtellina to life. Perfect for tourists seeking inspiration and web enthusiasts exploring cutting-edge design and development techniques."
+    />
 
     <!-- Google Fonts CDN -->
 
@@ -24,10 +31,12 @@
     />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="./src/css/style.css" />
+    <link rel="stylesheet" href="./src/css/rootLayoutStyle.css" />
+    <link rel="stylesheet" href="./src/css/header.css" />
+    <link rel="stylesheet" href="./src/css/sliderAnimals.css" />
 
-    <!-- SCRIPTS -->
-    <script src="./src/js/app.js" defer></script>
+    <!-- SCRIPT -->
+    <script type="module" src="./src/js/controller.js" defer></script>
   </head>
   <body>
     <!-- header -->
@@ -35,7 +44,7 @@
       <div class="layers">
         <div class="layer__header">
           <div class="layer__caption">
-            <h1 class="title layer__title">Explore the Majestic Alps</h1>
+            <h1 class="title layer__title">Journey Through Valtellina</h1>
             <h2 class="title layer__sub-title">Nature's Masterpiece</h2>
           </div>
         </div>
@@ -45,17 +54,59 @@
       </div>
     </header>
 
-    <!-- section -->
-    <section class="section">
-      <div class="section-content">
-        <h2>Lorem Ipusum Dolor</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente
-          dolore sequi soluta ratione recusandae quasi delectus quis possimus!
-          Pariatur atque est eius at consequatur officiis perspiciatis in sint a
-          veritatis, numquam explicabo.
-        </p>
+    <!-- SectionS -->
+
+    <!-- ANIMALS SLIDER -->
+
+    <section class="section animals-slider--wrapper">
+      <div class="section__caption">
+        <h2 class="title">Animals of Valtellina</h2>
       </div>
+
+      <div class="slider noSelect">
+        <div class="slide slide--1">
+          <img src="./src/img/animals/Chamois-NoBG.png" alt="Chamois" />
+        </div>
+
+        <div class="slide activeSlide slide--2">
+          <img src="./src/img/animals/Red Deer-NoBG.png" alt="Red Deer" />
+        </div>
+
+        <div class="slide slide--3">
+          <img
+            src="./src/img/animals/Golden Eagle-NoBG.png"
+            alt="Golden Eagle"
+          />
+        </div>
+        <div class="slide slide--4">
+          <img src="./src/img/animals/Marmot-NoBG.png" alt="Marmot" />
+        </div>
+        <div class="slide slide--5">
+          <img
+            src="./src/img/animals/European Adder-NoBG.png"
+            alt="European Adder"
+          />
+        </div>
+        <div class="slide slide--6">
+          <img
+            src="./src/img/animals/Alpine Salamander-NoBG.png"
+            alt="Alpine Salamander"
+          />
+        </div>
+        <div class="slide slide--7">
+          <img src="./src/img/animals/Brown Bear-NoBG.png" alt="Brown Bear" />
+        </div>
+        <div class="slide slide--8">
+          <img src="./src/img/animals/Wallcreeper-NoBG.png" alt="Wallcreeper" />
+        </div>
+        <div class="slide slide--9">
+          <img src="./src/img/animals/Ibex-NoBG.png" alt="Ibexr" />
+        </div>
+      </div>
+
+      <button class="slider__btn slider__btn--left">&larr;</button>
+      <button class="slider__btn slider__btn--right">&rarr;</button>
+      <div class="dots"></div>
     </section>
   </body>
 </html>
