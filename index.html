@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="./src/css/rootLayoutStyle.css" />
     <link rel="stylesheet" href="./src/css/header.css" />
     <link rel="stylesheet" href="./src/css/sliderAnimals.css" />
+    <link rel="stylesheet" href="./src/css/animations.css" />
 
     <!-- SCRIPT -->
     <script type="module" src="./src/js/controller.js" defer></script>
@@ -60,53 +61,316 @@
 
     <section class="section animals-slider--wrapper">
       <div class="section__caption">
-        <h2 class="title">Animals of Valtellina</h2>
+        <h2 class="title">
+          <span class="title--span">Valtellina</span>'s Wild Heart
+        </h2>
       </div>
 
       <div class="slider noSelect">
-        <div class="slide slide--1">
+        <!-- 
+        <div class="slide activeSlide slide--1">
           <img src="./src/img/animals/Chamois-NoBG.png" alt="Chamois" />
-        </div>
+        </div> 
 
-        <div class="slide activeSlide slide--2">
+        <div class="slide slide--2">
           <img src="./src/img/animals/Red Deer-NoBG.png" alt="Red Deer" />
-        </div>
+        </div> 
 
-        <div class="slide slide--3">
+         <div class="slide slide--3">
           <img
             src="./src/img/animals/Golden Eagle-NoBG.png"
             alt="Golden Eagle"
           />
         </div>
+
         <div class="slide slide--4">
           <img src="./src/img/animals/Marmot-NoBG.png" alt="Marmot" />
         </div>
+
         <div class="slide slide--5">
           <img
             src="./src/img/animals/European Adder-NoBG.png"
             alt="European Adder"
           />
         </div>
+
         <div class="slide slide--6">
           <img
             src="./src/img/animals/Alpine Salamander-NoBG.png"
             alt="Alpine Salamander"
           />
         </div>
+
         <div class="slide slide--7">
           <img src="./src/img/animals/Brown Bear-NoBG.png" alt="Brown Bear" />
         </div>
+
         <div class="slide slide--8">
           <img src="./src/img/animals/Wallcreeper-NoBG.png" alt="Wallcreeper" />
         </div>
+
         <div class="slide slide--9">
           <img src="./src/img/animals/Ibex-NoBG.png" alt="Ibexr" />
+        </div> 
+        -->
+
+        <div class="slide slide--1">
+          <div class="slide-image-wrapper">
+            <div class="slide-image--left">
+              <img
+                class="slide--image image-left-animated"
+                src="./src/img/animals/Chamois-NoBG.webp"
+                alt="Chamois"
+              />
+            </div>
+            <div class="slide-image--right">
+              <img
+                class="slide--image image-right-animated"
+                src="./src/img/animals/Chamois-NoBG.webp"
+                alt="Chamois"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="slide slide--2">
+          <div class="slide-image-wrapper">
+            <div class="slide-image--left">
+              <img
+                class="slide--image image-left-animated"
+                src="./src/img/animals/Red-Deer-NoBG.webp"
+                alt="Red Deer"
+              />
+            </div>
+            <div class="slide-image--right">
+              <img
+                class="slide--image image-right-animated"
+                src="./src/img/animals/Red-Deer-NoBG.webp"
+                alt="Red Deer"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="slide slide--3">
+          <div class="slide-image-wrapper">
+            <div class="slide-image--left">
+              <img
+                class="slide--image image-left-animated"
+                src="./src/img/animals/Golden-Eagle-NoBG.webp"
+                alt="Golden Eagle"
+              />
+            </div>
+            <div class="slide-image--right">
+              <img
+                class="slide--image image-right-animated"
+                src="./src/img/animals/Golden-Eagle-NoBG.webp"
+                alt="Golden Eagle"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="slide slide--4">
+          <div class="slide-image-wrapper">
+            <div class="slide-image--left">
+              <img
+                class="slide--image image-left-animated"
+                src="./src/img/animals/Marmot-NoBG.webp"
+                alt="Marmot"
+              />
+            </div>
+            <div class="slide-image--right">
+              <img
+                class="slide--image image-right-animated"
+                src="./src/img/animals/Marmot-NoBG.webp"
+                alt="Marmot"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="slide slide--5">
+          <div class="slide-image-wrapper">
+            <div class="slide-image--left">
+              <img
+                class="slide--image image-left-animated"
+                src="./src/img/animals/European-Adder-NoBG.webp"
+                alt="European Adder"
+              />
+            </div>
+            <div class="slide-image--right">
+              <img
+                class="slide--image image-right-animated"
+                src="./src/img/animals/European-Adder-NoBG.webp"
+                alt="European Adder"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="slide slide--6">
+          <div class="slide-image-wrapper">
+            <div class="slide-image--left">
+              <img
+                class="slide--image image-left-animated"
+                src="./src/img/animals/Alpine-Salamander-NoBG.webp"
+                alt="Alpine Salamander"
+              />
+            </div>
+            <div class="slide-image--right">
+              <img
+                class="slide--image image-right-animated"
+                src="./src/img/animals/Alpine-Salamander-NoBG.webp"
+                alt="Alpine Salamander"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="slide slide--7">
+          <div class="slide-image-wrapper">
+            <div class="slide-image--left">
+              <img
+                class="slide--image image-left-animated"
+                src="./src/img/animals/Brown-Bear-NoBG.webp"
+                alt="Brown Bear"
+              />
+            </div>
+            <div class="slide-image--right">
+              <img
+                class="slide--image image-right-animated"
+                src="./src/img/animals/Brown-Bear-NoBG.webp"
+                alt="Brown Bear"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="slide slide--8">
+          <div class="slide-image-wrapper">
+            <div class="slide-image--left">
+              <img
+                class="slide--image image-left-animated"
+                src="./src/img/animals/Wallcreeper-NoBG.webp"
+                alt="Wallcreeper"
+              />
+            </div>
+            <div class="slide-image--right">
+              <img
+                class="slide--image image-right-animated"
+                src="./src/img/animals/Wallcreeper-NoBG.webp"
+                alt="Wallcreeper"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="slide slide--9">
+          <div class="slide-image-wrapper">
+            <div class="slide-image--left">
+              <img
+                class="slide--image image-left-animated"
+                src="./src/img/animals/Ibex-NoBG.webp"
+                alt="Ibexr"
+              />
+            </div>
+            <div class="slide-image--right">
+              <img
+                class="slide--image image-right-animated"
+                src="./src/img/animals/Ibex-NoBG.webp"
+                alt="Ibexr"
+              />
+            </div>
+          </div>
+        </div>
+
+        <button class="slider__btn slider__btn--left">&larr;</button>
+        <button class="slider__btn slider__btn--right">&rarr;</button>
+        <div class="dots"></div>
+
+        <div class="slider-info">
+          <div class="info-slide slider-info--1 hidden">
+            <h3>Chamois</h3>
+            <p>
+              A type of goat-antelope, chamois are well-adapted to living in the
+              mountainous terrain of Valtellina
+            </p>
+          </div>
+
+          <div class="info-slide slider-info--2 hidden">
+            <h3>Red Deer</h3>
+            <p>
+              These majestic creatures are among the largest deer species and
+              can be spotted in forested areas of Valtellina
+            </p>
+          </div>
+
+          <div class="info-slide slider-info--3 hidden">
+            <h3>Golden Eagle</h3>
+            <p>
+              This magnificent bird of prey is one of the most emblematic
+              species of the Alpine region, often seen soaring above the
+              mountains
+            </p>
+          </div>
+
+          <div class="info-slide slider-info--4 hidden">
+            <h3>Marmot</h3>
+            <p>
+              These large ground squirrels are a common sight in Alpine meadows,
+              known for their burrowing habits and loud calls
+            </p>
+          </div>
+
+          <div class="info-slide slider-info--5 hidden">
+            <h3>European Adder</h3>
+            <p>
+              This venomous snake is found in a variety of habitats including
+              forests, meadows, and rocky slopes
+            </p>
+          </div>
+
+          <div class="info-slide slider-info--6 hidden">
+            <h3>Alpine Salamander</h3>
+            <p>
+              Unique to the Alpine region, this salamander is black, lives at
+              high altitudes, and is viviparous, giving birth to fully formed
+              young
+            </p>
+          </div>
+
+          <div class="info-slide slider-info--7 hidden">
+            <h3>Brown Bear</h3>
+            <p>
+              Although sightings are rare and mostly confined to the more
+              secluded areas, the brown bear is part of the region’s fauna
+            </p>
+          </div>
+
+          <div class="info-slide slider-info--8 hidden">
+            <h3>Wallcreeper</h3>
+            <p>
+              A small bird with striking crimson wings, the wallcreeper
+              frequents rocky cliffs and can be spotted scaling walls like a
+              mouse
+            </p>
+          </div>
+
+          <div class="info-slide slider-info--9 hidden">
+            <h3>Ibex</h3>
+            <p>
+              The ibex, or Alpine ibex, is known for its impressive curved horns
+              and is primarily found in the high rocky areas of the Alps
+            </p>
+          </div>
         </div>
       </div>
+    </section>
 
-      <button class="slider__btn slider__btn--left">&larr;</button>
-      <button class="slider__btn slider__btn--right">&rarr;</button>
-      <div class="dots"></div>
+    <section class="section coming-soon">
+      <h2 class="title">Stay Tuned!</h2>
+      <h3 class="title">We're Brewing Something Exciting!</h3>
     </section>
   </body>
 </html>

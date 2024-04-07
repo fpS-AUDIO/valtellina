@@ -3,17 +3,18 @@
 //////////////////////
 
 class SliderAnimal {
+  wrapper = document.querySelector(`.animals-slider--wrapper`);
   slider = document.querySelector(`.slider`);
   slides = document.querySelectorAll(`.slide`);
   slideRightBtn = document.querySelector(`.slider__btn--right`);
   slideLeftBtn = document.querySelector(`.slider__btn--left`);
   sliderDotsContainer = document.querySelector(`.dots`);
-  // currentSlide = 2; MODEL
-  // slidesNumber = null; MODEL
+  infoWrapper = document.querySelector(`.slider-info`);
+  infoSlides = document.querySelectorAll(`.info-slide`);
 
   goToSlide(slide) {
     this.slides.forEach((sld, indx) => {
-      sld.style.transform = `translateX(${100 * (indx - slide)}%)`;
+      sld.style.transform = `translateX(${100 * (indx - slide)}%) scale(0.6)`;
     });
   }
 
@@ -29,24 +30,19 @@ class SliderAnimal {
     });
   }
 
-  goToNextSlide() {
-    if (this.currentSlide === this.slidesNumber - 1) {
-      this.currentSlide = 0;
-    } else {
-      this.currentSlide++;
-    }
-    goToSlide(this.currentSlide);
-    activateSliderDot(this.currentSlide);
-  }
+  activateSlide(currentSlide) {
+    // deactivate all slides
+    this.slides.forEach((slide) => slide.classList.remove(`activeSlide`));
 
-  goToPreviousSlide() {
-    if (currentSlide === 0) {
-      this.currentSlide = this.slidesNumber - 1;
-    } else {
-      this.currentSlide--;
-    }
-    goToSlide(this.currentSlide);
-    activateSliderDot(this.currentSlide);
+    // spread nodeList into array and check for the current slide
+    const activeSlide = [...this.slides].filter((slide) => {
+      return slide.classList.contains(`slide--${currentSlide + 1}`);
+    });
+
+    if (!activeSlide) return;
+
+    // index 0 because the filter returns array
+    activeSlide[0].classList.add(`activeSlide`);
   }
 
   activateSliderDot(slide) {
@@ -60,40 +56,55 @@ class SliderAnimal {
       .classList.add(`dots__dot--active`);
   }
 
+  updateInfoContainer(numContainer) {
+    console.log(`stared`);
+    // first add hidden class to all slides
+    this.infoSlides.forEach((slide) => slide.classList.add(`hidden`));
+
+    // then search for the correct slide and remove hidden class
+    const currentSlider = this.infoWrapper.querySelector(
+      `.slider-info--${numContainer + 1}`
+    );
+    currentSlider.classList.remove(`hidden`);
+  }
+
+  // ----- handlers ----- //
+
   addHandelerControlSlider(subscriberFn) {
     subscriberFn();
   }
 
-  addHandelerNextSlide(subscriberFn) {
-    slideRightBtn.addEventListener(`click`, goToNextSlide);
+  addHandleChangeSlide(subscriberFn) {
+    this.wrapper.addEventListener(`click`, (e) => {
+      // check for clicked button next/prev
+      const btn = e.target.closest(`.slider__btn`);
+      if (!btn) return;
+
+      if (btn.classList.contains(`slider__btn--left`)) {
+        subscriberFn(`left`);
+      } else if (btn.classList.contains(`slider__btn--right`)) {
+        subscriberFn(`right`);
+      }
+    });
   }
-  addHandelerPrevSlide(subscriberFn) {
-    slideLeftBtn.addEventListener(`click`, goToPreviousSlide);
+
+  addHandlerChangeSlidebyButton(subscriberFn) {
+    document.addEventListener(`keydown`, function (e) {
+      if (e.key === `ArrowRight`) subscriberFn(`right`);
+      if (e.key === `ArrowLeft`) subscriberFn(`left`);
+    });
+  }
+
+  addHandlerControlDotsButtons(subscriberFn) {
+    this.sliderDotsContainer.addEventListener(`click`, function (e) {
+      if (!e.target.classList.contains(`dots__dot`)) return;
+      // get data-slide of target element
+      const slideNumber = e.target.dataset.slide;
+
+      // pass to controller (transformer to number)
+      subscriberFn(+slideNumber);
+    });
   }
 }
 
 export default new SliderAnimal();
-
-// // everything is in the separe function to not pollute the global namespace
-// const slider = function () {
-
-//   // --- event handlers ---
-
-//   document.addEventListener(`keydown`, function (e) {
-//     if (e.key === `ArrowRight`) goToNextSlide();
-//     if (e.key === `ArrowLeft`) goToPreviousSlide();
-//     // e.key === `ArrowLeft` && goToPreviousSlide();
-//   });
-
-//   // using event delegation
-//   sliderDotsContainer.addEventListener(`click`, function (e) {
-//     if (!e.target.classList.contains(`dots__dot`)) return;
-//     // get data-slide of target element
-//     const slideNumber = e.target.dataset.slide;
-//     // got to that data-slide number
-//     goToSlide(slideNumber);
-//     activateSliderDot(slideNumber);
-//   });
-// };
-
-// slider();

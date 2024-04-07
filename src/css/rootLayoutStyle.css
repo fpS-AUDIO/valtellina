@@ -8,36 +8,41 @@
 
 :root {
   /* sizes */
+  /* will-change: --index; */
   --index: calc(1vw + 1vh);
   --font-size: 16px;
   --border-radius: 8px;
   /* SPACES: 2, 4, 8, 12, 16, 24, 32, 48, 64, 80, 96, 128  */
 
   /* main colors */
-  --color-background: #ebfbee;
   --color-text-primary: #181818;
-  --color-title: #ebfbee;
+  --color-nearly-white: #fdfdfd;
+  --color-grey: #f1f3f5;
+  --color-accent-darkest: #2b8a3e;
+  --color-accent-darker: #2f9e44;
+  --color-accent: #40c057;
+  --color-accent-lighter: rgb(178, 242, 187); /* #b2f2bb */
+  --color-accent-lighter-transparent: rgba(178, 242, 187, 0.3);
+  --color-accent--lightest: #f7fcf7;
 
   /* slider */
-  --slider-width: 84vw;
-  --slider-height: 50svh;
+  --slider-width: 90vw;
+  --slider-slide-width: 30vw;
+  --slider-height: calc(var(--index) * 20);
+  --slider-btn-width: calc(var(--index) * 3);
+  --slider-btn-height: calc(var(--index) * 3);
+  --slider-btn-font-size: calc(var(--index) * 2);
 
-  --slider-box-shadow: 0 0.5rem 1rem -0.5rem rgba(0, 0, 0, 0.2);
-  --slider-btn-width: 2.5rem;
-  --slider-btn-height: 2.5rem;
-  --slider-btn-color: #333;
-  --slider-btn-color-bg: rgba(255, 255, 255, 0.7);
-  --slider-btn-font-size: 1.7rem;
+  --slider-btn-color: #e9e9e9;
+  /* --slider-btn-color-bg: rgba(0, 0, 0, 0.7); */
   --slider-btn-z-index: 2;
   --slider-dot-height: 0.7rem;
   --slider-dot-width: 0.7rem;
-  --slider-dot-margin-right: 1.75rem;
-  --slider-dot-color: #b9b9b9;
-  --slider-dot-color-active: #fff;
+  --slider-dot-margin-right: calc(var(--index));
 }
 
 body {
-  background-color: var(--color-background);
+  background-color: var(--color-accent--lightest);
 
   /* font */
   font-size: var(--font-size);
@@ -62,12 +67,19 @@ h2 {
 /* HEADER */
 
 .title {
-  color: var(--color-title);
+  color: var(--color-nearly-white);
   text-align: center;
   font-family: "Cabin", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  text-shadow: 2px 2px 8px #000000;
+  text-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.4);
+}
+/* .layer__caption .title {
+  color: var(--color-accent--lightest);
+} */
+
+.title .title--span {
+  color: var(--color-accent);
 }
 
 /* SECTION */
@@ -89,3 +101,25 @@ h2 {
   min-height: 100vh;
   padding: calc(var(--index) * 2);
 }
+
+.hidden {
+  display: none;
+  opacity: 0;
+}
+
+/* COMING SOON */
+.section.coming-soon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  text-wrap: balanced;
+}
+
+.section.coming-soon .title {
+  text-shadow: 0.1rem 0.1rem 0.5rem rgba(78, 182, 37, 0.4);
+  color: var(--color-accent);
+}
+

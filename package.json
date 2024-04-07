@@ -2,7 +2,7 @@
   "name": "explorevaltellina",
   "version": "1.0.0",
   "description": "A non-profit, visually engaging frontend website dedicated to showcasing the beauty and allure of Valtellina. Designed to enhance the region's image for tourists, this site serves as a vibrant portfolio piece demonstrating cutting-edge web development and design skills. Features include parallax effects, a slider showcasing typical animals of the region, and other interactive elements to captivate and inform visitors. This project aims not only to highlight the unique charm of Valtellina but also to serve as a testament to innovative frontend design and development.",
-  "main": "controller.js",
+  "default": "index.html",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html --dist-dir ./dist"

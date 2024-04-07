@@ -1,27 +1,23 @@
 __________________________________________________________________________________________________________
 ANIMALS:
 
-Red Deer (Cervus elaphus): These majestic creatures are among the largest deer species and can be spotted in forested areas of Valtellina.
+2 Red Deer (Cervus elaphus): These majestic creatures are among the largest deer species and can be spotted in forested areas of Valtellina.
 
-Roe Deer (Capreolus capreolus): Smaller than red deer, roe deer are adaptable and can be found in mixed landscapes of woodlands and fields.
+1 Chamois (Rupicapra rupicapra): A type of goat-antelope, chamois are well-adapted to living in the mountainous terrain of Valtellina.
 
-Chamois (Rupicapra rupicapra): A type of goat-antelope, chamois are well-adapted to living in the mountainous terrain of Valtellina.
+9 Ibex (Capra ibex): The ibex, or Alpine ibex, is known for its impressive curved horns and is primarily found in the high rocky areas of the Alps.
 
-Ibex (Capra ibex): The ibex, or Alpine ibex, is known for its impressive curved horns and is primarily found in the high rocky areas of the Alps.
+4 Marmot (Marmota marmota): These large ground squirrels are a common sight in Alpine meadows, known for their burrowing habits and loud calls.
 
-Marmot (Marmota marmota): These large ground squirrels are a common sight in Alpine meadows, known for their burrowing habits and loud calls.
+3 Golden Eagle (Aquila chrysaetos): This magnificent bird of prey is one of the most emblematic species of the Alpine region, often seen soaring above the mountains.
 
-Eurasian Lynx (Lynx lynx): A rare and elusive predator, the Eurasian lynx roams the remote forests of Valtellina, preying on ungulates and other small mammals.
+7 Brown Bear (Ursus arctos): Although sightings are rare and mostly confined to the more secluded areas, the brown bear is part of the region’s fauna.
 
-Golden Eagle (Aquila chrysaetos): This magnificent bird of prey is one of the most emblematic species of the Alpine region, often seen soaring above the mountains.
+6 Alpine Salamander (Salamandra atra): Unique to the Alpine region, this salamander is black, lives at high altitudes, and is viviparous, giving birth to fully formed young.
 
-Brown Bear (Ursus arctos): Although sightings are rare and mostly confined to the more secluded areas, the brown bear is part of the region’s fauna.
+5 European Adder (Vipera berus): This venomous snake is found in a variety of habitats including forests, meadows, and rocky slopes.
 
-Alpine Salamander (Salamandra atra): Unique to the Alpine region, this salamander is black, lives at high altitudes, and is viviparous, giving birth to fully formed young.
-
-European Adder (Vipera berus): This venomous snake is found in a variety of habitats including forests, meadows, and rocky slopes.
-
-Wallcreeper (Tichodroma muraria): A small bird with striking crimson wings, the wallcreeper frequents rocky cliffs and can be spotted scaling walls like a mouse.
+8 Wallcreeper (Tichodroma muraria): A small bird with striking crimson wings, the wallcreeper frequents rocky cliffs and can be spotted scaling walls like a mouse.
 
 
 

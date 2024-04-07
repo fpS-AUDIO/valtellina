@@ -589,6 +589,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _webImmediateJs = require("core-js/modules/web.immediate.js");
 var _runtime = require("regenerator-runtime/runtime");
 var _modelJs = require("./model.js");
+var _configJs = require("./config.js");
 var _mainViewJs = require("./views/mainView.js");
 var _mainViewJsDefault = parcelHelpers.interopDefault(_mainViewJs);
 var _sliderAnimalsViewJs = require("./views/sliderAnimalsView.js");
@@ -596,15 +597,53 @@ var _sliderAnimalsViewJsDefault = parcelHelpers.interopDefault(_sliderAnimalsVie
 // if (module.hot) {
 //   module.hot.accept();
 // }
+// ----- HELPER FUNCTIONS ----- //
+const updateCurrentSlide = function(currentSl) {
+    _modelJs.state.slider.currentSlide = currentSl;
+};
+const updateSlidesNumber = function(slidesNum) {
+    _modelJs.state.slider.slidesNumber = slidesNum;
+};
 // ----- CONTROLLER FUNCTIONS ----- //
 const controlUpdateScrollVariable = function(scrollY) {
     // Update CSS variable to body with current scroll position
     document.body.style.cssText = `--scrollTop: ${scrollY}px`;
 };
 const mainControlSlider = function() {
+    // update state with number of slides
+    updateSlidesNumber((0, _sliderAnimalsViewJsDefault.default).slides.length);
+    // update slides view on UI (init position)
     (0, _sliderAnimalsViewJsDefault.default).goToSlide(_modelJs.state.slider.currentSlide);
+    // update the active slide
+    (0, _sliderAnimalsViewJsDefault.default).activateSlide(_modelJs.state.slider.currentSlide);
+    // create dots buttons
     (0, _sliderAnimalsViewJsDefault.default).createDots();
-    (0, _sliderAnimalsViewJsDefault.default).activateSliderDot(1);
+    // activate the current dot button
+    (0, _sliderAnimalsViewJsDefault.default).activateSliderDot(_configJs.STARTING_SLIDE);
+    // show the info container
+    (0, _sliderAnimalsViewJsDefault.default).updateInfoContainer(_modelJs.state.slider.currentSlide);
+};
+const mainChangeSlideControl = function(direction) {
+    // 1. check for the next slide and update the state
+    // 1.1 if direction is a number
+    if (typeof direction === `number`) updateCurrentSlide(direction);
+    else if (direction === `left`) {
+        // if current slide is the first one, update it to last
+        if (_modelJs.state.slider.currentSlide === 0) updateCurrentSlide(_modelJs.state.slider.slidesNumber - 1);
+        else updateCurrentSlide(_modelJs.state.slider.currentSlide - 1);
+    } else if (direction === `right`) {
+        // if current slide is the last one, update it to the first
+        if (_modelJs.state.slider.currentSlide === _modelJs.state.slider.slidesNumber - 1) updateCurrentSlide(0);
+        else updateCurrentSlide(_modelJs.state.slider.currentSlide + 1);
+    }
+    // 2. update slides view on UI
+    (0, _sliderAnimalsViewJsDefault.default).goToSlide(_modelJs.state.slider.currentSlide);
+    // 3. update the active slide
+    (0, _sliderAnimalsViewJsDefault.default).activateSlide(_modelJs.state.slider.currentSlide);
+    // 4. activate slider dot button
+    (0, _sliderAnimalsViewJsDefault.default).activateSliderDot(_modelJs.state.slider.currentSlide);
+    // 5. update the info slider
+    (0, _sliderAnimalsViewJsDefault.default).updateInfoContainer(_modelJs.state.slider.currentSlide);
 };
 // ----- ENTRY POINT FUNCTION ----- //
 const init = function() {
@@ -612,10 +651,13 @@ const init = function() {
    * Entry point function based on publish–subscribe pattern
    */ (0, _mainViewJsDefault.default).addHandlerUpdateScrollVariable(controlUpdateScrollVariable);
     (0, _sliderAnimalsViewJsDefault.default).addHandelerControlSlider(mainControlSlider);
+    (0, _sliderAnimalsViewJsDefault.default).addHandleChangeSlide(mainChangeSlideControl);
+    (0, _sliderAnimalsViewJsDefault.default).addHandlerChangeSlidebyButton(mainChangeSlideControl);
+    (0, _sliderAnimalsViewJsDefault.default).addHandlerControlDotsButtons(mainChangeSlideControl);
 };
 init();
 
-},{"core-js/modules/web.immediate.js":"49tUX","regenerator-runtime/runtime":"dXNgZ","./model.js":"Y4A21","./views/mainView.js":"cuFOb","./views/sliderAnimalsView.js":"6moHl","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"49tUX":[function(require,module,exports) {
+},{"core-js/modules/web.immediate.js":"49tUX","regenerator-runtime/runtime":"dXNgZ","./model.js":"Y4A21","./config.js":"k5Hzs","./views/mainView.js":"cuFOb","./views/sliderAnimalsView.js":"6moHl","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"49tUX":[function(require,module,exports) {
 "use strict";
 // TODO: Remove this module from `core-js@4` since it's split to modules listed below
 require("52e9b3eefbbce1ed");
@@ -2440,6 +2482,7 @@ parcelHelpers.export(exports, "state", ()=>state);
 const state = {
     slider: {
         currentSlide: 2,
+        activeSlide: null,
         slidesNumber: null
     }
 };
@@ -2474,15 +2517,43 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}],"cuFOb":[function(require,module,exports) {
+},{}],"k5Hzs":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "STARTING_SLIDE", ()=>STARTING_SLIDE);
+const STARTING_SLIDE = 2;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cuFOb":[function(require,module,exports) {
+// class MainView {
+//   _parentElement = document.querySelector(`body`);
+//   addHandlerUpdateScrollVariable(subscriberFn) {
+//     window.addEventListener(`scroll`, (e) => {
+//       // make controller update CSS variable to body with current scroll position
+//       subscriberFn(window.scrollY);
+//     });
+//   }
+// }
+// export default new MainView();
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 class MainView {
     _parentElement = document.querySelector(`body`);
     addHandlerUpdateScrollVariable(subscriberFn) {
+        let isThrottled = false, savedArgs;
         window.addEventListener(`scroll`, (e)=>{
-            // make controller update CSS variable to body with current scroll position
+            if (isThrottled) {
+                savedArgs = arguments;
+                return;
+            }
             subscriberFn(window.scrollY);
+            isThrottled = true;
+            setTimeout(()=>{
+                isThrottled = false;
+                if (savedArgs) {
+                    subscriberFn(window.scrollY);
+                    savedArgs = null;
+                }
+            }, 5); // Adjust the timeout to control frequency
         });
     }
 }
@@ -2495,16 +2566,17 @@ exports.default = new MainView();
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 class SliderAnimal {
+    wrapper = document.querySelector(`.animals-slider--wrapper`);
     slider = document.querySelector(`.slider`);
     slides = document.querySelectorAll(`.slide`);
     slideRightBtn = document.querySelector(`.slider__btn--right`);
     slideLeftBtn = document.querySelector(`.slider__btn--left`);
     sliderDotsContainer = document.querySelector(`.dots`);
-    // currentSlide = 2; MODEL
-    // slidesNumber = null; MODEL
+    infoWrapper = document.querySelector(`.slider-info`);
+    infoSlides = document.querySelectorAll(`.info-slide`);
     goToSlide(slide) {
         this.slides.forEach((sld, indx)=>{
-            sld.style.transform = `translateX(${100 * (indx - slide)}%)`;
+            sld.style.transform = `translateX(${100 * (indx - slide)}%) scale(0.6)`;
         });
     }
     createDots() {
@@ -2515,17 +2587,18 @@ class SliderAnimal {
             this.sliderDotsContainer.insertAdjacentHTML(`beforeend`, `<button class="dots__dot" data-slide="${indx}"></button>`);
         });
     }
-    goToNextSlide() {
-        if (this.currentSlide === this.slidesNumber - 1) this.currentSlide = 0;
-        else this.currentSlide++;
-        goToSlide(this.currentSlide);
-        activateSliderDot(this.currentSlide);
-    }
-    goToPreviousSlide() {
-        if (currentSlide === 0) this.currentSlide = this.slidesNumber - 1;
-        else this.currentSlide--;
-        goToSlide(this.currentSlide);
-        activateSliderDot(this.currentSlide);
+    activateSlide(currentSlide) {
+        // deactivate all slides
+        this.slides.forEach((slide)=>slide.classList.remove(`activeSlide`));
+        // spread nodeList into array and check for the current slide
+        const activeSlide = [
+            ...this.slides
+        ].filter((slide)=>{
+            return slide.classList.contains(`slide--${currentSlide + 1}`);
+        });
+        if (!activeSlide) return;
+        // index 0 because the filter returns array
+        activeSlide[0].classList.add(`activeSlide`);
     }
     activateSliderDot(slide) {
         // selecting all existing slider dots and remove active class from all of them
@@ -2535,35 +2608,44 @@ class SliderAnimal {
         // select the dot basing of the given data-attribute and add the active class to this dot
         document.querySelector(`.dots__dot[data-slide="${slide}"]`).classList.add(`dots__dot--active`);
     }
+    updateInfoContainer(numContainer) {
+        console.log(`stared`);
+        // first add hidden class to all slides
+        this.infoSlides.forEach((slide)=>slide.classList.add(`hidden`));
+        // then search for the correct slide and remove hidden class
+        const currentSlider = this.infoWrapper.querySelector(`.slider-info--${numContainer + 1}`);
+        currentSlider.classList.remove(`hidden`);
+    }
+    // ----- handlers ----- //
     addHandelerControlSlider(subscriberFn) {
         subscriberFn();
     }
-    addHandelerNextSlide(subscriberFn) {
-        slideRightBtn.addEventListener(`click`, goToNextSlide);
+    addHandleChangeSlide(subscriberFn) {
+        this.wrapper.addEventListener(`click`, (e)=>{
+            // check for clicked button next/prev
+            const btn = e.target.closest(`.slider__btn`);
+            if (!btn) return;
+            if (btn.classList.contains(`slider__btn--left`)) subscriberFn(`left`);
+            else if (btn.classList.contains(`slider__btn--right`)) subscriberFn(`right`);
+        });
     }
-    addHandelerPrevSlide(subscriberFn) {
-        slideLeftBtn.addEventListener(`click`, goToPreviousSlide);
+    addHandlerChangeSlidebyButton(subscriberFn) {
+        document.addEventListener(`keydown`, function(e) {
+            if (e.key === `ArrowRight`) subscriberFn(`right`);
+            if (e.key === `ArrowLeft`) subscriberFn(`left`);
+        });
+    }
+    addHandlerControlDotsButtons(subscriberFn) {
+        this.sliderDotsContainer.addEventListener(`click`, function(e) {
+            if (!e.target.classList.contains(`dots__dot`)) return;
+            // get data-slide of target element
+            const slideNumber = e.target.dataset.slide;
+            // pass to controller (transformer to number)
+            subscriberFn(+slideNumber);
+        });
     }
 }
-exports.default = new SliderAnimal(); // // everything is in the separe function to not pollute the global namespace
- // const slider = function () {
- //   // --- event handlers ---
- //   document.addEventListener(`keydown`, function (e) {
- //     if (e.key === `ArrowRight`) goToNextSlide();
- //     if (e.key === `ArrowLeft`) goToPreviousSlide();
- //     // e.key === `ArrowLeft` && goToPreviousSlide();
- //   });
- //   // using event delegation
- //   sliderDotsContainer.addEventListener(`click`, function (e) {
- //     if (!e.target.classList.contains(`dots__dot`)) return;
- //     // get data-slide of target element
- //     const slideNumber = e.target.dataset.slide;
- //     // got to that data-slide number
- //     goToSlide(slideNumber);
- //     activateSliderDot(slideNumber);
- //   });
- // };
- // slider();
+exports.default = new SliderAnimal();
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["hycaY","aenu9"], "aenu9", "parcelRequire2bcf")
 

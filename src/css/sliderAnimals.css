@@ -1,6 +1,11 @@
 .animals-slider--wrapper {
-  padding-top: calc(var(--index) * 10);
+  padding-top: calc(var(--index) * 15);
   position: relative;
+}
+
+.section__caption {
+  margin-bottom: calc(var(--index) * 4);
+  text-wrap: balance;
 }
 
 .slider {
@@ -8,9 +13,8 @@
   height: var(--slider-height);
   margin: 0 auto;
   position: relative;
-  /* overflow: hidden; */
+  overflow: hidden;
   border-radius: var(--border-radius);
-  box-shadow: var(--slider-box-shadow);
 }
 
 .slide {
@@ -18,7 +22,7 @@
   top: 0;
   left: 33%;
 
-  width: 28vw;
+  width: var(--slider-slide-width);
   height: var(--slider-height);
 
   display: flex;
@@ -27,52 +31,125 @@
 
   opacity: 0.6;
   filter: blur(5px);
-  transform: scale(0.7);
+  transform: scale(0.6);
 
   transition: transform 1s, filter 1s;
+
+  overflow: hidden;
 }
 
 .slide.activeSlide {
   opacity: 0.9;
   filter: blur(0);
-  transform: scale(1);
+  transform: scale(1) !important;
 }
 
-.slide > img {
+/* .slide > img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  
+} */
+
+/* ----- styling for animated images ----- */
+.slide-image-wrapper > * {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  perspective: 20rem;
+  transform-style: preserve-3d;
+}
+
+.slide .slide--image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slide-image--left {
+  /* orientation of perspective from left to center */
+  perspective-origin: left center;
+  /* cut image in half */
+  /* clip path: left-top, left-top, left-top, left-top in watch direction from top left*/
+  clip-path: polygon(0 0, 51% 0, 51% 100%, 0 100%);
+  /* clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%); */
+}
+
+.slide-image--right {
+  /* orientation of perspective from right to center */
+  perspective-origin: right center;
+  /* cut image in half */
+  clip-path: polygon(49% 0, 100% 0, 100% 100%, 49% 100%);
+  /* clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%); */
+}
+
+.image-left-animated {
+  animation: k-left-side 2s ease-in-out infinite;
+  animation-direction: alternate;
+}
+
+.image-right-animated {
+  animation: k-right-side 2s ease-in-out infinite;
+  animation-direction: alternate;
+}
+
+/* --------------------------------- */
+
+/* shadow below image */
+.slide::after {
+  content: "";
+  position: absolute;
+  width: calc(var(--slider-slide-width) / 2);
+  height: 0;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-40%);
+  /* background-color: black; */
+  box-shadow: 0 0 16px 2px #010101;
+  z-index: -1;
 }
 
 .slider__btn {
+  /* positioning and dimensions */
   position: absolute;
-  top: 50%;
+  bottom: 0;
   z-index: var(--slider-btn-z-index);
-
-  border: none;
-  background: var(--slider-btn-color-bg);
-  font-family: inherit;
-  color: var(--slider-btn-color);
-  border-radius: 50%;
   height: var(--slider-btn-height);
   width: var(--slider-btn-width);
+
+  /* styling */
+  border: none;
+  background: var(--color-accent-lighter-transparent);
+  color: var(--color-accent-darker);
+  border-radius: 50%;
+
   font-size: var(--slider-btn-font-size);
   cursor: pointer;
+
+  /* flexbox */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .slider__btn--left {
-  left: 8%;
+  left: 6%;
   transform: translate(-50%, -50%);
 }
 
 .slider__btn--right {
-  right: 8%;
+  right: 6%;
   transform: translate(50%, -50%);
 }
 
 .dots {
   position: absolute;
-  bottom: 5%;
+  bottom: 1%;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -80,7 +157,7 @@
 
 .dots__dot {
   border: none;
-  background-color: var(--slider-dot-color);
+  background-color: var(--color-accent-lighter);
   opacity: 0.7;
   height: var(--slider-dot-height);
   width: var(--slider-dot-width);
@@ -98,6 +175,23 @@
 }
 
 .dots__dot--active {
-  background-color: var(--slider-dot-color-active);
+  background-color: var(--color-accent);
   opacity: 1;
+}
+
+.slider-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--slider-slide-width);
+  /* background-color: blueviolet; */
+  backdrop-filter: blur(5px);
+  background-color: rgba(217, 217, 217, 0.2);
+  padding: calc(var(--index) * 0.8);
+  border-radius: 8px;
+  font-size: calc(var(--index));
+}
+
+.slider-info h3 {
+  margin-bottom: calc(var(--index));
 }
