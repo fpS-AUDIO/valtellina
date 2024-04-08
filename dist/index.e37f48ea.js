@@ -2524,37 +2524,45 @@ parcelHelpers.export(exports, "STARTING_SLIDE", ()=>STARTING_SLIDE);
 const STARTING_SLIDE = 2;
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cuFOb":[function(require,module,exports) {
-// class MainView {
-//   _parentElement = document.querySelector(`body`);
-//   addHandlerUpdateScrollVariable(subscriberFn) {
-//     window.addEventListener(`scroll`, (e) => {
-//       // make controller update CSS variable to body with current scroll position
-//       subscriberFn(window.scrollY);
-//     });
-//   }
-// }
-// export default new MainView();
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 class MainView {
+    // Selects the <body> element as the main element of interest for this view.
     _parentElement = document.querySelector(`body`);
+    _header = document.querySelector(`.header-container`);
+    _headerHeight = this._header.getBoundingClientRect().height;
+    // Adds a handler function that updates a variable based on the scroll position.
     addHandlerUpdateScrollVariable(subscriberFn) {
-        let isThrottled = false, savedArgs;
-        window.addEventListener(`scroll`, (e)=>{
-            if (isThrottled) {
-                savedArgs = arguments;
-                return;
-            }
-            subscriberFn(window.scrollY);
-            isThrottled = true;
-            setTimeout(()=>{
-                isThrottled = false;
-                if (savedArgs) {
-                    subscriberFn(window.scrollY);
-                    savedArgs = null;
-                }
-            }, 5); // Adjust the timeout to control frequency
-        });
+        // initializes a variable to hold the last known scroll position
+        let lastScrollY = window.scrollY;
+        // flag to indicate whether an update has already been scheduled
+        let ticking = false;
+        // This function is called whenever the user scrolls.
+        const onScroll = ()=>{
+            // Updates `lastScrollY` with the current scroll position.
+            lastScrollY = window.scrollY;
+            // Requests an animation frame to update the scroll variable if not already requested.
+            // guard clause to exit function header is not more visible because of scrolling down
+            // using cached height for performance
+            if (lastScrollY > this._headerHeight) return;
+            requestTick();
+        };
+        // Requests an update (if not already in progress) to process changes.
+        const requestTick = ()=>{
+            // If an update hasn't been scheduled yet, it schedules one.
+            if (!ticking) requestAnimationFrame(update);
+            // Sets the flag indicating that an update has been scheduled.
+            ticking = true;
+        };
+        // The update function, called once per animation frame.
+        const update = ()=>{
+            // Resets the ticking flag to allow further updates to be scheduled.
+            ticking = false;
+            // Calls the subscriber function with the latest scroll position.
+            subscriberFn(lastScrollY);
+        };
+        // Adds the scroll event listener to the window, triggering `onScroll` on scroll events.
+        window.addEventListener("scroll", onScroll);
     }
 }
 exports.default = new MainView();

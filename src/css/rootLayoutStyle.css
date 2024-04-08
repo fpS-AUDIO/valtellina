@@ -12,13 +12,15 @@
   --index: calc(1vw + 1vh);
   --font-size: 16px;
   --border-radius: 8px;
+  --section-margin-top: calc(var(--index) * 5);
   /* SPACES: 2, 4, 8, 12, 16, 24, 32, 48, 64, 80, 96, 128  */
 
   /* main colors */
   --color-text-primary: #181818;
   --color-nearly-white: #fdfdfd;
   --color-grey: #f1f3f5;
-  --color-accent-darkest: #2b8a3e;
+  /* --color-accent-darkest: #2b8a3e; */
+  --color-accent-darkest: #1b5c29;
   --color-accent-darker: #2f9e44;
   --color-accent: #40c057;
   --color-accent-lighter: rgb(178, 242, 187); /* #b2f2bb */
@@ -36,8 +38,8 @@
   --slider-btn-color: #e9e9e9;
   /* --slider-btn-color-bg: rgba(0, 0, 0, 0.7); */
   --slider-btn-z-index: 2;
-  --slider-dot-height: 0.7rem;
-  --slider-dot-width: 0.7rem;
+  --slider-dot-height: calc(var(--index));
+  --slider-dot-width: calc(var(--index));
   --slider-dot-margin-right: calc(var(--index));
 }
 
@@ -72,14 +74,15 @@ h2 {
   font-family: "Cabin", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  text-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.4);
+  /* text-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.4); */
+  text-shadow: 0 0 2px#000000;
 }
 /* .layer__caption .title {
   color: var(--color-accent--lightest);
 } */
 
 .title .title--span {
-  color: var(--color-accent);
+  color: var(--color-accent-darker);
 }
 
 /* SECTION */
@@ -98,7 +101,7 @@ h2 {
 }
 
 .section {
-  min-height: 100vh;
+  /* min-height: 75vh; */
   padding: calc(var(--index) * 2);
 }
 
@@ -109,6 +112,8 @@ h2 {
 
 /* COMING SOON */
 .section.coming-soon {
+  margin-top: var(--section-margin-top);
+  height: 50svh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -122,4 +127,3 @@ h2 {
   text-shadow: 0.1rem 0.1rem 0.5rem rgba(78, 182, 37, 0.4);
   color: var(--color-accent);
 }
-

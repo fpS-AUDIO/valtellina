@@ -1,6 +1,10 @@
 .animals-slider--wrapper {
-  padding-top: calc(var(--index) * 15);
+  margin-top: var(--section-margin-top);
   position: relative;
+}
+
+.animals-slider--wrapper .title {
+  color: var(--color-text-primary);
 }
 
 .section__caption {

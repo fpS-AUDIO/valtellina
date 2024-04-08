@@ -7,6 +7,7 @@
   z-index: 100;
   height: calc(var(--index) * 18);
   bottom: calc(var(--index) * -8);
+  filter: drop-shadow(0 10px 10px #00000080);
   background-image: url("after-header.89b3b325.webp");
   background-repeat: no-repeat;
   background-size: cover;
@@ -55,7 +56,7 @@
 }
 
 .layer__caption {
-  margin-top: -15vh;
+  transform: translate3d(0, -100%, 0);
 }
 
 .layer__title {
