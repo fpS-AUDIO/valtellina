@@ -57,7 +57,6 @@ class SliderAnimal {
   }
 
   updateInfoContainer(numContainer) {
-    console.log(`stared`);
     // first add hidden class to all slides
     this.infoSlides.forEach((slide) => slide.classList.add(`hidden`));
 

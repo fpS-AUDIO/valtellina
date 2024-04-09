@@ -19,7 +19,6 @@
   --color-text-primary: #181818;
   --color-nearly-white: #fdfdfd;
   --color-grey: #f1f3f5;
-  /* --color-accent-darkest: #2b8a3e; */
   --color-accent-darkest: #1b5c29;
   --color-accent-darker: #2f9e44;
   --color-accent: #40c057;
@@ -69,20 +68,26 @@ h2 {
 /* HEADER */
 
 .title {
-  color: var(--color-nearly-white);
+  color: var(--color-text-primary);
   text-align: center;
   font-family: "Cabin", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  /* text-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.4); */
-  text-shadow: 0 0 2px#000000;
 }
-/* .layer__caption .title {
-  color: var(--color-accent--lightest);
-} */
 
 .title .title--span {
   color: var(--color-accent-darker);
+}
+
+.title-primary {
+  letter-spacing: calc(var(--index) / 4);
+  text-transform: uppercase;
+  font-size: calc(var(--index) * 1.5);
+}
+
+.sub-title {
+  letter-spacing: calc(var(--index) / 5);
+  font-size: calc(var(--index) * 1.4);
 }
 
 /* SECTION */

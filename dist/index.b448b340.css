@@ -3,10 +3,6 @@
   position: relative;
 }
 
-.animals-slider--wrapper .title {
-  color: var(--color-text-primary);
-}
-
 .section__caption {
   margin-bottom: calc(var(--index) * 4);
   text-wrap: balance;

@@ -2617,7 +2617,6 @@ class SliderAnimal {
         document.querySelector(`.dots__dot[data-slide="${slide}"]`).classList.add(`dots__dot--active`);
     }
     updateInfoContainer(numContainer) {
-        console.log(`stared`);
         // first add hidden class to all slides
         this.infoSlides.forEach((slide)=>slide.classList.add(`hidden`));
         // then search for the correct slide and remove hidden class

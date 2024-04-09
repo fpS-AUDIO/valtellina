@@ -1,7 +1,7 @@
 .section.sentence-section {
   /* size and position */
   padding: calc(var(--index) * 3);
-  margin-top: calc(var(--index) * 12);
+  margin-top: calc(var(--index) * 8);
   height: 45svh;
   position: relative;
 

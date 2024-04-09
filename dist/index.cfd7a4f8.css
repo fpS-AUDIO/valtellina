@@ -53,16 +53,26 @@ h2 {
 }
 
 .title {
-  color: var(--color-nearly-white);
+  color: var(--color-text-primary);
   text-align: center;
   font-optical-sizing: auto;
-  text-shadow: 0 0 2px #000;
   font-family: Cabin, sans-serif;
   font-style: normal;
 }
 
 .title .title--span {
   color: var(--color-accent-darker);
+}
+
+.title-primary {
+  letter-spacing: calc(var(--index) / 4);
+  text-transform: uppercase;
+  font-size: calc(var(--index) * 1.5);
+}
+
+.sub-title {
+  letter-spacing: calc(var(--index) / 5);
+  font-size: calc(var(--index) * 1.4);
 }
 
 .noSelect {
