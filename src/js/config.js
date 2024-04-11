@@ -1,1 +1,1 @@
-export const STARTING_SLIDE = 2;
+export const STARTING_SLIDE = 1;

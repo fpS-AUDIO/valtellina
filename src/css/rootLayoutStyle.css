@@ -7,48 +7,66 @@
 }
 
 :root {
-  /* sizes */
-  /* will-change: --index; */
-  --index: calc(1vw + 1vh);
-  --font-size: 16px;
+  /* SPACING SYSTEM (px): 2, 4, 8, 12, 16, 24, 32, 48, 64, 80, 96, 128, 160, 192, 224  */
+
+  --index: calc(1vw + 1vh); /* will-change: --index; */
   --border-radius: 8px;
-  --section-margin-top: calc(var(--index) * 5);
-  /* SPACES: 2, 4, 8, 12, 16, 24, 32, 48, 64, 80, 96, 128  */
+  --font-size-smallscreens: calc(var(--index) * 1.1);
+  --font-size-smallscreens-title: calc(var(--index) * 1.5);
+
+  /* SPACES--paddings */
+  --padding-bigger: 4.8rem;
+  --padding-default: 3.2rem;
+  --padding-smaller: 2.4rem;
+  --padding-smallest: 1.6rem;
+  --padding-adaptive: calc(var(--index) * 2);
+
+  /* SPACES--margins */
+  --margin-bottom-bigest: calc(var(--index) * 15);
+  --margin-bottom-big: 19.2rem;
+  --margin-bottom-normal: 4.8rem;
+  --margin-bottom-smaller: 2.4rem;
+  --margin-bottom-smallest: 1.6rem;
+
+  /* SPACES--slider */
+  --slider-height: calc(var(--index) * 20);
+  --slider-width: 90vw;
+  --slider-slide-width: 30vw;
+  --slider-btn-width: 4.8rem;
+  --slider-btn-height: 4.8rem;
+  --slider-dot-height: 1.6rem;
+  --slider-dot-width: 1.6rem;
+  --slider-dot-height-smallscreen: calc(var(--index) * 0.9);
+  --slider-dot-width-smallscreen: calc(var(--index) * 0.9);
 
   /* main colors */
   --color-text-primary: #181818;
   --color-nearly-white: #fdfdfd;
   --color-grey: #f1f3f5;
+  --color-grey-trasparent: rgba(217, 217, 217, 0.2);
   --color-accent-darkest: #1b5c29;
   --color-accent-darker: #2f9e44;
   --color-accent: #40c057;
   --color-accent-lighter: rgb(178, 242, 187); /* #b2f2bb */
   --color-accent-lighter-transparent: rgba(178, 242, 187, 0.3);
   --color-accent--lightest: #f7fcf7;
+}
 
-  /* slider */
-  --slider-width: 90vw;
-  --slider-slide-width: 30vw;
-  --slider-height: calc(var(--index) * 20);
-  --slider-btn-width: calc(var(--index) * 3);
-  --slider-btn-height: calc(var(--index) * 3);
-  --slider-btn-font-size: calc(var(--index) * 2);
-
-  --slider-btn-color: #e9e9e9;
-  /* --slider-btn-color-bg: rgba(0, 0, 0, 0.7); */
-  --slider-btn-z-index: 2;
-  --slider-dot-height: calc(var(--index));
-  --slider-dot-width: calc(var(--index));
-  --slider-dot-margin-right: calc(var(--index));
+html {
+  /* avoiding fixed font-size to allow user set their font-size */
+  /* font-size: 10px; */
+  /* seting it to % of user's settings: 10px / 16px = 0.625 === 62.5%*/
+  /* so now 1rem === 10px */
+  font-size: 62.5%;
 }
 
 body {
+  overflow-x: hidden;
+  width: 100vw;
   background-color: var(--color-accent--lightest);
 
   /* font */
-  font-size: var(--font-size);
   font-family: "Roboto", sans-serif;
-  font-size: var(--font-size);
   font-weight: 400;
   color: var(--color-text-primary);
   font-style: normal;
@@ -56,16 +74,16 @@ body {
 }
 
 h1 {
-  font-size: 2.986rem;
+  font-size: 2.9rem;
   font-weight: 700;
 }
 
 h2 {
-  font-size: 2.488rem;
+  font-size: 2.5rem;
   font-weight: 600;
 }
 
-/* HEADER */
+/* ----- TITLE CLASSES ----- */
 
 .title {
   color: var(--color-text-primary);
@@ -79,18 +97,57 @@ h2 {
   color: var(--color-accent-darker);
 }
 
-.title-primary {
+.title--primary {
   letter-spacing: calc(var(--index) / 4);
   text-transform: uppercase;
   font-size: calc(var(--index) * 1.5);
 }
 
-.sub-title {
+.title--secondary {
   letter-spacing: calc(var(--index) / 5);
   font-size: calc(var(--index) * 1.4);
 }
 
-/* SECTION */
+/* ----- MARGIN CLASSES ----- */
+
+.margin-botton-bigest {
+  margin-bottom: var(--margin-bottom-bigest);
+}
+.margin-botton-big {
+  margin-bottom: var(--margin-bottom-big);
+}
+.margin-botton-normal {
+  margin-bottom: var(--margin-bottom-normal);
+}
+.margin-botton-smaller {
+  margin-bottom: var(--margin-bottom-smaller);
+}
+.margin-botton-smallest {
+  margin-bottom: var(--margin-bottom-smallest);
+}
+
+/* ----- SECTION CLASSES ----- */
+
+.section {
+  padding: var(--padding-adaptive);
+  font-size: 1.6rem;
+  max-width: 100vw;
+  /* overflow: hidden; */
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: var(--padding-adaptive);
+    font-size: 1.6rem;
+  }
+}
+
+/* ----- GENERAL CLASSES ----- */
 
 .noSelect {
   -webkit-tap-highlight-color: transparent;
@@ -105,19 +162,9 @@ h2 {
   outline: none !important;
 }
 
-.section {
-  /* min-height: 75vh; */
-  padding: calc(var(--index) * 2);
-}
+/* ----- COMING SOON CLASSES ----- */
 
-.hidden {
-  display: none;
-  opacity: 0;
-}
-
-/* COMING SOON */
 .section.coming-soon {
-  margin-top: var(--section-margin-top);
   height: 50svh;
   display: flex;
   flex-direction: column;

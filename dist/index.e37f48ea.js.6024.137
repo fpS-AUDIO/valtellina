@@ -2479,16 +2479,15 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "state", ()=>state);
-var _configJs = require("./config.js");
 const state = {
     slider: {
-        currentSlide: _configJs.STARTING_SLIDE,
+        currentSlide: 2,
         activeSlide: null,
         slidesNumber: null
     }
 };
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./config.js":"k5Hzs"}],"gkKU3":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -2522,7 +2521,7 @@ exports.export = function(dest, destName, get) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "STARTING_SLIDE", ()=>STARTING_SLIDE);
-const STARTING_SLIDE = 1;
+const STARTING_SLIDE = 2;
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cuFOb":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");

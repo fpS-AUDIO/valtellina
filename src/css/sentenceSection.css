@@ -1,9 +1,9 @@
 .section.sentence-section {
   /* size and position */
   padding: calc(var(--index) * 3);
-  margin-top: calc(var(--index) * 8);
   height: 45svh;
   position: relative;
+  overflow: hidden;
 
   /* styling */
   background-image: url("../img/sentences-bg.webp");
@@ -19,22 +19,27 @@
 }
 
 .sentence-section .title-wrapper {
-  /* border-radius: var(--border-radius); */
   position: absolute;
   top: 30%;
   left: 0;
   max-width: 75%;
-  padding: calc(var(--index) * 2);
+  padding: var(--padding-bigger);
   background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(1px);
+}
+
+@media (max-width: 600px) {
+  .sentence-section .title-wrapper {
+    padding: var(--padding-smaller);
+  }
 }
 
 .sentence-section .title {
   color: var(--color-accent-darkest);
   text-wrap: balance;
   font-style: italic;
-  font-size: calc(var(--index));
-  text-shadow: none;
+  font-size: var(--font-size-smallscreens-title);
+  letter-spacing: 0.1rem;
 }
 .sentence-section .quotation-mark-box {
   position: absolute;
@@ -46,5 +51,4 @@
   font-style: italic;
   color: var(--color-accent-darker);
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  /* font-family: Georgia, "Times New Roman", Times, serif; */
 }

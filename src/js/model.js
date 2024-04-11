@@ -1,6 +1,8 @@
+import * as cfg from "./config.js";
+
 export const state = {
   slider: {
-    currentSlide: 2,
+    currentSlide: cfg.STARTING_SLIDE,
     activeSlide: null,
     slidesNumber: null,
   },

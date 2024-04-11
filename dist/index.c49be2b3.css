@@ -56,10 +56,10 @@
 }
 
 .header-container .layer__caption {
-  margin-top: -15vh;
+  margin-top: -12.8rem;
 }
 
-.header-container .title-primary, .header-container .sub-title {
+.header-container .title--primary, .header-container .title--secondary {
   color: var(--color-nearly-white);
   text-shadow: 0 0 2px #000;
 }

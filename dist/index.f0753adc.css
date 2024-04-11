@@ -1,6 +1,5 @@
 .section.sentence-section {
   padding: calc(var(--index) * 3);
-  margin-top: calc(var(--index) * 8);
   background-image: url("sentences-bg.cc625e3b.webp");
   background-position: center;
   background-repeat: no-repeat;
@@ -10,11 +9,12 @@
   height: 45svh;
   display: flex;
   position: relative;
+  overflow: hidden;
   box-shadow: 0 0 10px #0006;
 }
 
 .sentence-section .title-wrapper {
-  padding: calc(var(--index) * 2);
+  padding: var(--padding-bigger);
   backdrop-filter: blur(1px);
   background-color: #fffc;
   max-width: 75%;
@@ -23,12 +23,18 @@
   left: 0;
 }
 
+@media (width <= 600px) {
+  .sentence-section .title-wrapper {
+    padding: var(--padding-smaller);
+  }
+}
+
 .sentence-section .title {
   color: var(--color-accent-darkest);
   text-wrap: balance;
   font-style: italic;
-  font-size: calc(var(--index));
-  text-shadow: none;
+  font-size: var(--font-size-smallscreens-title);
+  letter-spacing: .1rem;
 }
 
 .sentence-section .quotation-mark-box {

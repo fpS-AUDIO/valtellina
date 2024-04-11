@@ -57,18 +57,17 @@
   /* mix-blend-mode: hard-light; */
 }
 
-/* NO MARGIN BECAUSE OF PERFORMANCE ISSUE */
 .header-container .layer__caption {
-  margin-top: -15vh;
-  /* transform: translate3d(0, -100%, 0); */
+  margin-top: -12.8rem;
+  /* margin-top: -16rem; */
 }
 
-.header-container .title-primary {
+.header-container .title--primary {
   color: var(--color-nearly-white);
   text-shadow: 0 0 2px#000000;
 }
 
-.header-container .sub-title {
+.header-container .title--secondary {
   color: var(--color-nearly-white);
   text-shadow: 0 0 2px#000000;
 }
