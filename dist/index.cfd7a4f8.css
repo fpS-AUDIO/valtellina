@@ -38,6 +38,7 @@
   --color-accent-lighter: #b2f2bb;
   --color-accent-lighter-transparent: #b2f2bb4d;
   --color-accent--lightest: #f7fcf7;
+  --default-boxshadow: #32325d40 0px 13px 27px -5px, #0000004d 0px 8px 16px -8px;
 }
 
 html {
@@ -136,6 +137,12 @@ h2 {
 
 .noSelect:focus {
   outline: none !important;
+}
+
+.container--centered {
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .section.coming-soon {

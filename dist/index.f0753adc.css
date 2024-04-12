@@ -1,5 +1,6 @@
 .section.sentence-section {
   padding: calc(var(--index) * 3);
+  box-shadow: var(--default-boxshadow);
   background-image: url("sentences-bg.cc625e3b.webp");
   background-position: center;
   background-repeat: no-repeat;
@@ -10,7 +11,6 @@
   display: flex;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 0 10px #0006;
 }
 
 .sentence-section .title-wrapper {

@@ -37,8 +37,8 @@
 }
 
 .features--section .features__feature:hover, .features--section .features__feature:active {
+  box-shadow: var(--default-boxshadow);
   transform: scale(1.1);
-  box-shadow: 0 0 8px #0000004d;
 }
 
 .features--section .feature-icon {
