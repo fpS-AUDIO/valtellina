@@ -15,7 +15,7 @@
   --padding-smallest: 1.6rem;
   --padding-adaptive: calc(var(--index) * 2);
   --margin-bottom-bigest: calc(var(--index) * 15);
-  --margin-bottom-big: 19.2rem;
+  --margin-bottom-big: 22.4rem;
   --margin-bottom-normal: 4.8rem;
   --margin-bottom-smaller: 2.4rem;
   --margin-bottom-smallest: 1.6rem;
@@ -28,6 +28,8 @@
   --slider-dot-width: 1.6rem;
   --slider-dot-height-smallscreen: calc(var(--index) * .9);
   --slider-dot-width-smallscreen: calc(var(--index) * .9);
+  --color-navbar-bg: #dadada99;
+  --color-navbar-border: #065f1380;
   --color-text-primary: #181818;
   --color-nearly-white: #fdfdfd;
   --color-grey: #f1f3f5;

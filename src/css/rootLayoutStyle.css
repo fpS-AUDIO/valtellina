@@ -23,7 +23,8 @@
 
   /* SPACES--margins */
   --margin-bottom-bigest: calc(var(--index) * 15);
-  --margin-bottom-big: 19.2rem;
+  /* --margin-bottom-big: 19.2rem; */
+  --margin-bottom-big: 22.4rem;
   --margin-bottom-normal: 4.8rem;
   --margin-bottom-smaller: 2.4rem;
   --margin-bottom-smallest: 1.6rem;
@@ -40,6 +41,8 @@
   --slider-dot-width-smallscreen: calc(var(--index) * 0.9);
 
   /* main colors */
+  --color-navbar-bg: rgba(218, 218, 218, 0.6);
+  --color-navbar-border: rgba(6, 95, 19, 0.5);
   --color-text-primary: #181818;
   --color-nearly-white: #fdfdfd;
   --color-grey: #f1f3f5;

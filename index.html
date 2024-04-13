@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="./src/css/rootLayoutStyle.css" />
     <link rel="stylesheet" href="./src/css/animations.css" />
     <link rel="stylesheet" href="./src/css/header.css" />
+    <link rel="stylesheet" href="./src/css/nav.css" />
     <link rel="stylesheet" href="./src/css/features.css" />
     <link rel="stylesheet" href="./src/css/sentenceSection.css" />
     <link rel="stylesheet" href="./src/css/sliderAnimals.css" />
@@ -46,6 +47,39 @@
     <!-- -------------------- HEADER -------------------- -->
 
     <header class="header-container margin-botton-bigest">
+      <nav class="nav">
+        <div class="logo-box">
+          <img
+            class="nav__logo"
+            src="./src/img/logo_explore_valtellina.webp"
+            alt="logo"
+            designer="Alexander"
+          />
+        </div>
+        <input type="checkbox" class="menu-btn" id="id-menu-btn" />
+        <ul class="nav__links">
+          <li class="nav__item">
+            <a class="nav__link" href="#section--1">features</a>
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link" href="#section--2">animals</a>
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link" href="#section--3">mindset</a>
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link" href="#section--4">sport</a>
+          </li>
+        </ul>
+        <label class="menu-icon noSelect" for="id-menu-btn">
+          <!-- the true icon -->
+          <span class="nav-icon"></span>
+        </label>
+      </nav>
+
       <div class="layers">
         <div class="layer__header">
           <div class="layer__caption">
@@ -63,7 +97,7 @@
     <main>
       <!-- -------------------- SECTIONS__FEATURES --------------------  -->
 
-      <div class="section features--section margin-botton-big">
+      <div id="section--1" class="section features--section margin-botton-big">
         <h2 class="title title--primary">
           Valtellina <span class="title--span">Explored</span>
         </h2>
@@ -71,8 +105,8 @@
           Discoveries in Nature, Culture, and Pleasure
         </h3>
         <div class="features">
-          <div class="features__feature feature--1">
-            <div class="icon-box margin-botton-smaller noSelect">
+          <div class="features__feature feature--1 noSelect">
+            <div class="icon-box margin-botton-smaller">
               <img
                 class="feature-icon"
                 src="./src/img/icons/mountain.png"
@@ -89,8 +123,8 @@
               grandeur.
             </p>
           </div>
-          <div class="features__feature feature--2">
-            <div class="icon-box margin-botton-smaller noSelect">
+          <div class="features__feature feature--2 noSelect">
+            <div class="icon-box margin-botton-smaller">
               <img
                 class="feature-icon"
                 src="./src/img/icons/cutlery.png"
@@ -106,8 +140,8 @@
               the exquisite notes of Nebbiolo wines.
             </p>
           </div>
-          <div class="features__feature feature--3">
-            <div class="icon-box margin-botton-smaller noSelect">
+          <div class="features__feature feature--3 noSelect">
+            <div class="icon-box margin-botton-smaller">
               <img
                 class="feature-icon"
                 src="./src/img/icons/grape.png"
@@ -123,8 +157,8 @@
               the taste of its world-renowned wines.
             </p>
           </div>
-          <div class="features__feature feature--4">
-            <div class="icon-box margin-botton-smaller noSelect">
+          <div class="features__feature feature--4 noSelect">
+            <div class="icon-box margin-botton-smaller">
               <img
                 class="feature-icon"
                 src="./src/img/icons/museum.png"
@@ -140,8 +174,8 @@
               stories that have shaped this enchanting valley.
             </p>
           </div>
-          <div class="features__feature feature--5">
-            <div class="icon-box margin-botton-smaller noSelect">
+          <div class="features__feature feature--5 noSelect">
+            <div class="icon-box margin-botton-smaller">
               <img
                 class="feature-icon"
                 src="./src/img/icons/boot.png"
@@ -157,8 +191,8 @@
               activities for every thrill-seeker.
             </p>
           </div>
-          <div class="features__feature feature--6">
-            <div class="icon-box margin-botton-smaller noSelect">
+          <div class="features__feature feature--6 noSelect">
+            <div class="icon-box margin-botton-smaller">
               <img
                 class="feature-icon"
                 src="./src/img/icons/deer.png"
@@ -174,8 +208,8 @@
               as you explore the valley.
             </p>
           </div>
-          <div class="features__feature feature--7">
-            <div class="icon-box margin-botton-smaller noSelect">
+          <div class="features__feature feature--7 noSelect">
+            <div class="icon-box margin-botton-smaller">
               <img
                 class="feature-icon"
                 src="./src/img/icons/paintbrush.png"
@@ -189,8 +223,8 @@
               artifacts, each piece tells a story of tradition and artistry.
             </p>
           </div>
-          <div class="features__feature feature--8">
-            <div class="icon-box margin-botton-smaller noSelect">
+          <div class="features__feature feature--8 noSelect">
+            <div class="icon-box margin-botton-smaller">
               <img
                 class="feature-icon"
                 src="./src/img/icons/spa.png"
@@ -209,23 +243,12 @@
         </div>
       </div>
 
-      <!-- -------------------- SECTIONS__SENTENCE --------------------  -->
-
-      <div class="section sentence-section margin-botton-big noSelect">
-        <div class="title-wrapper">
-          <div class="quotation-mark-box">
-            <h2 class="quotation-mark">"</h2>
-          </div>
-          <h1 class="title">
-            "Where the Alps whisper ancient tales, Valtellina awaits to unveil
-            its hidden wonders and timeless flavors."
-          </h1>
-        </div>
-      </div>
-
       <!-- -------------------- SECTIONS__ANIMALS --------------------  -->
 
-      <section class="section animals-slider--wrapper margin-botton-big">
+      <section
+        id="section--2"
+        class="section animals-slider--wrapper margin-botton-big"
+      >
         <div class="section__caption margin-botton-normal">
           <h2 class="title title--primary">
             Valtellina's <span class="title--span">Wild</span> Heart
@@ -234,51 +257,51 @@
 
         <div class="slider noSelect">
           <!-- 
-          <div class="slide activeSlide slide--1">
-            <img src="./src/img/animals/Chamois-NoBG.png" alt="Chamois" />
-          </div> 
-          
-          <div class="slide slide--2">
-            <img src="./src/img/animals/Red Deer-NoBG.png" alt="Red Deer" />
-          </div> 
-
-          <div class="slide slide--3">
-            <img
-            src="./src/img/animals/Golden Eagle-NoBG.png"
-            alt="Golden Eagle"
-            />
-          </div>
-          
-          <div class="slide slide--4">
-            <img src="./src/img/animals/Marmot-NoBG.png" alt="Marmot" />
-          </div>
-          
-          <div class="slide slide--5">
-            <img
-            src="./src/img/animals/European Adder-NoBG.png"
-            alt="European Adder"
-            />
-          </div>
-          
-          <div class="slide slide--6">
-            <img
-            src="./src/img/animals/Alpine Salamander-NoBG.png"
-            alt="Alpine Salamander"
-            />
-          </div>
-          
-          <div class="slide slide--7">
-            <img src="./src/img/animals/Brown Bear-NoBG.png" alt="Brown Bear" />
-          </div>
-          
-          <div class="slide slide--8">
-            <img src="./src/img/animals/Wallcreeper-NoBG.png" alt="Wallcreeper" />
-          </div>
-          
-          <div class="slide slide--9">
-            <img src="./src/img/animals/Ibex-NoBG.png" alt="Ibexr" />
-          </div> 
-        -->
+              <div class="slide activeSlide slide--1">
+                <img src="./src/img/animals/Chamois-NoBG.png" alt="Chamois" />
+              </div> 
+              
+              <div class="slide slide--2">
+                <img src="./src/img/animals/Red Deer-NoBG.png" alt="Red Deer" />
+              </div> 
+    
+              <div class="slide slide--3">
+                <img
+                src="./src/img/animals/Golden Eagle-NoBG.png"
+                alt="Golden Eagle"
+                />
+              </div>
+              
+              <div class="slide slide--4">
+                <img src="./src/img/animals/Marmot-NoBG.png" alt="Marmot" />
+              </div>
+              
+              <div class="slide slide--5">
+                <img
+                src="./src/img/animals/European Adder-NoBG.png"
+                alt="European Adder"
+                />
+              </div>
+              
+              <div class="slide slide--6">
+                <img
+                src="./src/img/animals/Alpine Salamander-NoBG.png"
+                alt="Alpine Salamander"
+                />
+              </div>
+              
+              <div class="slide slide--7">
+                <img src="./src/img/animals/Brown Bear-NoBG.png" alt="Brown Bear" />
+              </div>
+              
+              <div class="slide slide--8">
+                <img src="./src/img/animals/Wallcreeper-NoBG.png" alt="Wallcreeper" />
+              </div>
+              
+              <div class="slide slide--9">
+                <img src="./src/img/animals/Ibex-NoBG.png" alt="Ibexr" />
+              </div> 
+            -->
 
           <div class="slide slide--1">
             <div class="slide-image-wrapper">
@@ -452,8 +475,8 @@
           </div>
 
           <!-- <button class="slider__btn slider__btn--left">&larr;</button>
-          <button class="slider__btn slider__btn--right">&rarr;</button>
-          <div class="dots"></div> -->
+              <button class="slider__btn slider__btn--right">&rarr;</button>
+              <div class="dots"></div> -->
         </div>
         <div class="slider-info">
           <div class="info-slide slider-info--1 hidden">
@@ -536,8 +559,25 @@
         <div class="dots noSelect"></div>
       </section>
 
+      <!-- -------------------- SECTIONS__SENTENCE --------------------  -->
+
+      <div
+        id="section--3"
+        class="section sentence-section margin-botton-big noSelect"
+      >
+        <div class="title-wrapper">
+          <div class="quotation-mark-box">
+            <h2 class="quotation-mark">"</h2>
+          </div>
+          <h1 class="title">
+            "Where the Alps whisper ancient tales, Valtellina awaits to unveil
+            its hidden wonders and timeless flavors."
+          </h1>
+        </div>
+      </div>
+
       <!-- -------------------- SECTIONS__SPORTS --------------------  -->
-      <div class="section section--sports margin-botton-big">
+      <div id="section--4" class="section section--sports margin-botton-big">
         <div class="section__caption margin-botton-normal">
           <h2 class="title title--primary">
             Discover Adventure <span class="title--span">Sports</span> in
