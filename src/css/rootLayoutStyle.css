@@ -19,7 +19,7 @@
   --padding-default: 3.2rem;
   --padding-smaller: 2.4rem;
   --padding-smallest: 1.6rem;
-  --padding-adaptive: calc(var(--index) * 2);
+  --padding-adaptive: calc(var(--sindex) * 2);
 
   /* SPACES--margins */
   --margin-bottom-bigest: calc(var(--index) * 15);
@@ -42,6 +42,7 @@
 
   /* main colors */
   --color-navbar-bg: rgba(218, 218, 218, 0.6);
+  --color-navbar-bg-focus: rgba(218, 218, 218, 0.8);
   --color-navbar-border: rgba(6, 95, 19, 0.5);
   --color-text-primary: #181818;
   --color-nearly-white: #fdfdfd;
@@ -53,6 +54,7 @@
   --color-accent-lighter: rgb(178, 242, 187); /* #b2f2bb */
   --color-accent-lighter-transparent: rgba(178, 242, 187, 0.3);
   --color-accent--lightest: #f7fcf7;
+  --color-accent--lightest-trasparent: rgba(247, 252, 247, 0.6);
 
   --default-boxshadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -172,22 +174,4 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-/* ----- COMING SOON CLASSES ----- */
-
-.section.coming-soon {
-  height: 50svh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  text-align: center;
-  text-wrap: balanced;
-}
-
-.section.coming-soon .title {
-  text-shadow: 0.1rem 0.1rem 0.5rem rgba(78, 182, 37, 0.4);
-  color: var(--color-accent);
 }

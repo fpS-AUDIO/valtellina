@@ -6,7 +6,7 @@ import * as model from "./model.js";
 import * as cfg from "./config.js";
 import MainView from "./views/mainView.js";
 import SliderAnimal from "./views/sliderAnimalsView.js";
-import sliderAnimalsView from "./views/sliderAnimalsView.js";
+import navView from "./views/navView.js";
 
 // if (module.hot) {
 //   module.hot.accept();
@@ -96,6 +96,7 @@ const init = function () {
   SliderAnimal.addHandleChangeSlide(mainChangeSlideControl);
   SliderAnimal.addHandlerChangeSlidebyButton(mainChangeSlideControl);
   SliderAnimal.addHandlerControlDotsButtons(mainChangeSlideControl);
+  navView.addHandlerNavLinks();
 };
 
 init();

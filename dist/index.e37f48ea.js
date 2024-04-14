@@ -594,6 +594,8 @@ var _mainViewJs = require("./views/mainView.js");
 var _mainViewJsDefault = parcelHelpers.interopDefault(_mainViewJs);
 var _sliderAnimalsViewJs = require("./views/sliderAnimalsView.js");
 var _sliderAnimalsViewJsDefault = parcelHelpers.interopDefault(_sliderAnimalsViewJs);
+var _navViewJs = require("./views/navView.js");
+var _navViewJsDefault = parcelHelpers.interopDefault(_navViewJs);
 // if (module.hot) {
 //   module.hot.accept();
 // }
@@ -654,10 +656,11 @@ const init = function() {
     (0, _sliderAnimalsViewJsDefault.default).addHandleChangeSlide(mainChangeSlideControl);
     (0, _sliderAnimalsViewJsDefault.default).addHandlerChangeSlidebyButton(mainChangeSlideControl);
     (0, _sliderAnimalsViewJsDefault.default).addHandlerControlDotsButtons(mainChangeSlideControl);
+    (0, _navViewJsDefault.default).addHandlerNavLinks();
 };
 init();
 
-},{"core-js/modules/web.immediate.js":"49tUX","regenerator-runtime/runtime":"dXNgZ","./model.js":"Y4A21","./config.js":"k5Hzs","./views/mainView.js":"cuFOb","./views/sliderAnimalsView.js":"6moHl","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"49tUX":[function(require,module,exports) {
+},{"core-js/modules/web.immediate.js":"49tUX","regenerator-runtime/runtime":"dXNgZ","./model.js":"Y4A21","./config.js":"k5Hzs","./views/mainView.js":"cuFOb","./views/sliderAnimalsView.js":"6moHl","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./views/navView.js":"82Kie"}],"49tUX":[function(require,module,exports) {
 "use strict";
 // TODO: Remove this module from `core-js@4` since it's split to modules listed below
 require("52e9b3eefbbce1ed");
@@ -2654,6 +2657,36 @@ class SliderAnimal {
     }
 }
 exports.default = new SliderAnimal();
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"82Kie":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+class NavView {
+    _parentElement = document.querySelector(`.nav`);
+    _scrollDowbBtn = document.querySelector(`.scroll-down-btn--link`);
+    _checkBoxBtn = document.getElementById(`id-menu-btn`);
+    addHandlerNavLinks(subscriberFn) {
+        [
+            this._parentElement,
+            this._scrollDowbBtn
+        ].forEach((el)=>el.addEventListener(`click`, (e)=>{
+                // checking if the actual link was clicked
+                const triggerLink = e.target.closest(`.nav__link`);
+                if (!triggerLink) return;
+                // preventing default behavior of links
+                e.preventDefault();
+                // get href attribute of trigger
+                const hrefAttr = triggerLink.getAttribute(`href`);
+                // scroll to the interested section
+                document.querySelector(hrefAttr).scrollIntoView({
+                    behavior: `smooth`
+                });
+                // remove te 'checked' attr from checkbox to close the menu in small screens
+                this._checkBoxBtn.checked = false;
+            }));
+    }
+}
+exports.default = new NavView();
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["hycaY","aenu9"], "aenu9", "parcelRequire2bcf")
 

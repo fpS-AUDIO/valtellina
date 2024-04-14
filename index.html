@@ -39,6 +39,7 @@
     <link rel="stylesheet" href="./src/css/sentenceSection.css" />
     <link rel="stylesheet" href="./src/css/sliderAnimals.css" />
     <link rel="stylesheet" href="./src/css/sportsSection.css" />
+    <link rel="stylesheet" href="./src/css/footer.css" />
 
     <!-- SCRIPT -->
     <script type="module" src="./src/js/controller.js" defer></script>
@@ -67,7 +68,7 @@
           </li>
 
           <li class="nav__item">
-            <a class="nav__link" href="#section--3">mindset</a>
+            <a class="nav__link" href="#section--3">philosophy</a>
           </li>
 
           <li class="nav__item">
@@ -89,7 +90,16 @@
         </div>
         <div class="layer layer__base"></div>
         <div class="layer layer__middle"></div>
-        <div class="layer layer__front"></div>
+        <div class="layer layer__front">
+          <a
+            class="scroll-down-btn--link nav__link noSelect animateDown"
+            href="#section--1"
+            ><img
+              class="scroll-down-btn--img"
+              src="./src/img/icons/arrow--down.png"
+              alt="arrow down"
+          /></a>
+        </div>
       </div>
     </header>
 
@@ -668,10 +678,46 @@
 
       <!-- -------------------- SECTIONS__COMING SOON --------------------  -->
 
-      <section class="section coming-soon margin-botton-big">
-        <h2 class="title">Stay Tuned!</h2>
-        <h3 class="title">We're Brewing Something Exciting!</h3>
+      <section class="section margin-botton-bigest">
+        <h1 class="title title--primary">Stay Tuned!</h1>
+        <h2 class="title title--secondary">
+          We're Brewing Something Exciting!
+        </h2>
       </section>
     </main>
+
+    <footer class="footer">
+      <div class="footer-decoration-box">
+        <img
+          class="footer-decoration-img"
+          src="./src/img/footer-waves.svg"
+          alt="footer decoration abstract"
+        />
+      </div>
+      <div class="disclaimer">
+        <p>
+          <strong>Disclaimer:</strong> The content on this website, including
+          all images, logos, text, and the depiction of the geographical
+          location known as Valtellina, is provided for educational and
+          demonstration purposes only. This is a personal project designed to
+          showcase web development and design skills, and is not intended for
+          commercial use. Any resemblances to actual persons, living or dead, or
+          actual events are purely coincidental. Logos and certain images have
+          been created and generated for illustrative purposes using artificial
+          intelligence and do not represent any real entities. The use of
+          "Valtellina" refers to a real geographic location, however, any
+          events, activities, or entities described in relation to Valtellina on
+          this site are purely fictional and created for the purpose of this
+          project. This website is provided "as is" without any representations
+          or warranties, express or implied. The owner of this website makes no
+          representations or warranties in relation to this website or the
+          information and materials provided on this website. By using this
+          site, you acknowledge and agree that you bear all risks associated
+          with its use and agree to hold the developer harmless from any and all
+          claims, losses, liability, damages, and/or costs arising from your use
+          of the site.
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

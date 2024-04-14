@@ -17,4 +17,24 @@
     transform: rotateY(.6deg)scaleX(.94);
   }
 }
+
+@keyframes k-animate-scroll-down {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+
+  75% {
+    opacity: 1;
+    transform: translate3d(-50%, 2.4rem, 0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(-50%, 2.4rem, 0);
+  }
+}
+
+.animateDown {
+  animation: 3s infinite k-animate-scroll-down;
+}
 /*# sourceMappingURL=index.8fb3e330.css.map */

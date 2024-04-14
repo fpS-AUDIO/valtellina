@@ -13,7 +13,7 @@
   --padding-default: 3.2rem;
   --padding-smaller: 2.4rem;
   --padding-smallest: 1.6rem;
-  --padding-adaptive: calc(var(--sindex) * 2);
+  --padding-adaptive: calc(var(--index) * 2);
   --margin-bottom-bigest: calc(var(--index) * 15);
   --margin-bottom-big: 22.4rem;
   --margin-bottom-normal: 4.8rem;
@@ -41,7 +41,6 @@
   --color-accent-lighter: #b2f2bb;
   --color-accent-lighter-transparent: #b2f2bb4d;
   --color-accent--lightest: #f7fcf7;
-  --color-accent--lightest-trasparent: #f7fcf799;
   --default-boxshadow: #32325d40 0px 13px 27px -5px, #0000004d 0px 8px 16px -8px;
 }
 
@@ -147,5 +146,21 @@ h2 {
   justify-content: center;
   align-items: center;
   display: flex;
+}
+
+.section.coming-soon {
+  text-align: center;
+  text-wrap: balanced;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 50svh;
+  display: flex;
+}
+
+.section.coming-soon .title {
+  text-shadow: .1rem .1rem .5rem #4eb62566;
+  color: var(--color-accent);
 }
 /*# sourceMappingURL=index.cfd7a4f8.css.map */

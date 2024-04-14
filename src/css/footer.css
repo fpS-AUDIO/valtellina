@@ -1,0 +1,32 @@
+.footer {
+  width: 100vw;
+
+  background-color: var(--color-accent-darker);
+  position: relative;
+  z-index: 5;
+}
+
+.footer .footer-decoration-box {
+  position: absolute;
+  top: calc(var(--index) * -5);
+  left: 0;
+  width: 100vw;
+  height: calc(var(--index) * 5);
+  z-index: 4;
+}
+.footer .footer-decoration-img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  /* object-fit: cover; */
+}
+
+.footer .disclaimer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 8;
+  padding: var(--padding-default);
+  background-color: var(--color-accent-darker);
+  font-size: 1.6rem;
+}

@@ -1,0 +1,2 @@
+@keyframes k-left-side{0%{transform:rotateY(-.6deg)scaleX(.94)}to{transform:rotateY(0)scaleX(1)}}@keyframes k-right-side{0%{transform:rotateY(0)scaleX(1)}to{transform:rotateY(.6deg)scaleX(.94)}}@keyframes k-animate-scroll-down{0%{transform:translate(-50%)}75%{opacity:1;transform:translate(-50%,2.4rem)}to{opacity:0;transform:translate(-50%,2.4rem)}}.animateDown{animation:3s infinite k-animate-scroll-down}
+/*# sourceMappingURL=index.1f61e45d.css.map */
