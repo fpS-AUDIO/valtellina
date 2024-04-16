@@ -12,10 +12,10 @@
   --padding-bigger: 4.8rem;
   --padding-default: 3.2rem;
   --padding-smaller: 2.4rem;
-  --padding-smallest: 1.6rem;
+  --padding-smallest: 1.2rem;
   --padding-adaptive: calc(var(--sindex) * 2);
   --margin-bottom-bigest: calc(var(--index) * 15);
-  --margin-bottom-big: 22.4rem;
+  --margin-bottom-big: 10.4rem;
   --margin-bottom-normal: 4.8rem;
   --margin-bottom-smaller: 2.4rem;
   --margin-bottom-smallest: 1.6rem;
@@ -57,7 +57,7 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 1.2;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 h1 {
@@ -74,6 +74,7 @@ h2 {
   color: var(--color-text-primary);
   text-align: center;
   font-optical-sizing: auto;
+  text-wrap: balance;
   font-family: Cabin, sans-serif;
   font-style: normal;
 }
@@ -119,16 +120,28 @@ h2 {
   font-size: 1.6rem;
 }
 
-.hidden {
-  opacity: 0;
-  display: none;
-}
-
 @media (width <= 600px) {
   .section {
     padding: var(--padding-adaptive);
     font-size: 1.6rem;
   }
+}
+
+.hidden {
+  opacity: 0 !important;
+  display: none !important;
+}
+
+.sticky {
+  top: 0;
+  left: 0;
+  position: fixed !important;
+}
+
+.section-nav-rootMargin {
+  opacity: 0;
+  width: 100vw;
+  height: 120px;
 }
 
 .noSelect {

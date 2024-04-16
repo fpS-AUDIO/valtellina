@@ -5,9 +5,10 @@
 }
 
 .features--section .features {
+  padding: var(--padding-bigger);
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 2.4rem;
-  max-width: 1700px;
+  max-width: min(1700px, 100vw);
   display: grid;
 }
 
@@ -22,7 +23,6 @@
 @media (width <= 800px) {
   .features--section .features {
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
   }
 
   .features--section .features__feature {
@@ -30,9 +30,13 @@
   }
 }
 
-@media (width <= 320px) {
+@media (width <= 400px) {
   .features--section .features {
     grid-template-columns: 1fr;
+  }
+
+  .features--section .features__feature {
+    padding: var(--padding-smallest);
   }
 }
 

@@ -3,6 +3,10 @@ class MainView {
   _parentElement = document.querySelector(`body`);
   _header = document.querySelector(`.header-container`);
   _headerHeight = this._header.getBoundingClientRect().height;
+  _scrollDownBtn = document.querySelector(`.scroll-down-btn--link`);
+
+  // helper function toggle hidden class on _scrollDownBtn
+  showHidescrollDownBtn() {}
 
   // Adds a handler function that updates a variable based on the scroll position.
   addHandlerUpdateScrollVariable(subscriberFn) {
@@ -45,6 +49,28 @@ class MainView {
     // Adds the scroll event listener to the window, triggering `onScroll` on scroll events.
     window.addEventListener("scroll", onScroll);
   }
+
+  addHandlerHidescrollDownBtn() {
+    const observerCallback = (entries, observer) => {
+      const [entry] = entries;
+      if (entry.isIntersecting) this._scrollDownBtn.classList.remove(`hidden`);
+      if (!entry.isIntersecting) this._scrollDownBtn.classList.add(`hidden`);
+    };
+
+    const observerOptions = {
+      root: null,
+      threshold: 0.85,
+    };
+
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions
+    );
+
+    observer.observe(this._header);
+  }
+
+  
 }
 
 export default new MainView();

@@ -1,5 +1,5 @@
 .nav {
-  z-index: 10;
+  z-index: 100;
   background-color: var(--color-navbar-bg);
   backdrop-filter: blur(3px);
   box-shadow: var(--default-boxshadow);
@@ -57,8 +57,8 @@
 
 .nav .menu-icon {
   cursor: pointer;
-  width: 4.8rem;
-  height: 4.8rem;
+  width: 3.2rem;
+  height: 3.2rem;
   margin: 1.2rem 2.4rem;
   display: none;
   position: relative;
@@ -67,7 +67,7 @@
 .nav .nav-icon {
   background-color: var(--color-accent-darkest);
   border-radius: var(--border-radius);
-  width: 4.8rem;
+  width: 3.2rem;
   height: .4rem;
   display: none;
   position: absolute;
@@ -133,6 +133,7 @@
   }
 
   .nav .nav__item {
+    backdrop-filter: blur(3px);
     text-align: center;
     width: 100%;
   }

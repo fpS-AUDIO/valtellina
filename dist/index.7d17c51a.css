@@ -6,10 +6,11 @@
 }
 
 .footer .footer-decoration-box {
-  top: calc(var(--index) * -5);
+  top: calc(var(--index) * -4.5);
   height: calc(var(--index) * 5);
   z-index: 4;
   width: 100vw;
+  display: block;
   position: absolute;
   left: 0;
 }

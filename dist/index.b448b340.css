@@ -99,7 +99,7 @@
   font-size: 3.2rem;
   display: flex;
   position: absolute;
-  bottom: -7%;
+  bottom: -15%;
 }
 
 .animals-slider--wrapper .slider__btn--left {
@@ -115,7 +115,7 @@
 .animals-slider--wrapper .dots {
   display: flex;
   position: absolute;
-  bottom: -10%;
+  bottom: -18%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -149,6 +149,7 @@
 }
 
 .animals-slider--wrapper .slider-info {
+  text-wrap: balance;
   max-width: var(--slider-slide-width);
   backdrop-filter: blur(5px);
   background-color: var(--color-grey-trasparent);
@@ -161,7 +162,6 @@
 
 @media (width <= 600px) {
   .animals-slider--wrapper .slider-info {
-    max-width: calc(var(--slider-slide-width) * 1.2);
     padding: var(--padding-smallest);
     font-size: var(--font-size-smallscreens);
   }

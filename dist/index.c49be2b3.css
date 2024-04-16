@@ -4,7 +4,7 @@
 
 .header-container:after {
   content: "";
-  z-index: 100;
+  z-index: 15;
   height: calc(var(--index) * 18);
   bottom: calc(var(--index) * -8);
   filter: drop-shadow(0 10px 10px #00000080);
@@ -66,11 +66,13 @@
 }
 
 .header-container .scroll-down-btn--link {
-  border: 2px solid var(--color-accent--lightest-trasparent);
   z-index: 15;
+  border: 2px solid var(--color-accent--lightest-trasparent);
+  outline: 1px solid var(--color-accent--lightest-trasparent);
   border-radius: 50%;
   width: 4.2rem;
   height: 4.2rem;
+  transition: all .3s ease-in-out;
   display: inline-block;
   position: absolute;
   bottom: 35svh;

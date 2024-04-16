@@ -92,11 +92,13 @@ const init = function () {
    * Entry point function based on publish–subscribe pattern
    */
   MainView.addHandlerUpdateScrollVariable(controlUpdateScrollVariable);
+  MainView.addHandlerHidescrollDownBtn();
   SliderAnimal.addHandelerControlSlider(mainControlSlider);
   SliderAnimal.addHandleChangeSlide(mainChangeSlideControl);
   SliderAnimal.addHandlerChangeSlidebyButton(mainChangeSlideControl);
   SliderAnimal.addHandlerControlDotsButtons(mainChangeSlideControl);
   navView.addHandlerNavLinks();
+  navView.addHandlerStickNavbar();
 };
 
 init();

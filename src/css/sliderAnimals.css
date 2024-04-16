@@ -110,7 +110,7 @@
 .animals-slider--wrapper .slider__btn {
   /* positioning and dimensions */
   position: absolute;
-  bottom: -7%;
+  bottom: -15%;
   height: var(--slider-btn-height);
   width: var(--slider-btn-width);
 
@@ -141,7 +141,7 @@
 
 .animals-slider--wrapper .dots {
   position: absolute;
-  bottom: -10%;
+  bottom: -18%;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -176,6 +176,7 @@
 }
 
 .animals-slider--wrapper .slider-info {
+  text-wrap: balance;
   position: absolute;
   top: 25%;
   left: 5%;
@@ -189,7 +190,7 @@
 
 @media (max-width: 600px) {
   .animals-slider--wrapper .slider-info {
-    max-width: calc(var(--slider-slide-width) * 1.2);
+    /* max-width: calc(var(--slider-slide-width) * 1.1); */
     padding: var(--padding-smallest);
     font-size: var(--font-size-smallscreens);
   }

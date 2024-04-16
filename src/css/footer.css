@@ -8,7 +8,8 @@
 
 .footer .footer-decoration-box {
   position: absolute;
-  top: calc(var(--index) * -5);
+  display: block;
+  top: calc(var(--index) * -4.5);
   left: 0;
   width: 100vw;
   height: calc(var(--index) * 5);

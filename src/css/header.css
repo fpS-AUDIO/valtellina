@@ -5,7 +5,7 @@
 .header-container::after {
   content: "";
   position: absolute;
-  z-index: 100;
+  z-index: 15;
   width: 100%;
   height: calc(var(--index) * 18);
   background-image: url("../img/after-header.webp");
@@ -75,20 +75,25 @@
 }
 
 .header-container .scroll-down-btn--link {
+  /* size */
   display: inline-block;
-  border: 2px solid var(--color-accent--lightest-trasparent);
-  border-radius: 50%;
   width: 4.2rem;
   height: 4.2rem;
-  /* background-color: yellow; */
-  position: absolute;
 
+  /* position */
+  position: absolute;
   bottom: 35svh;
   left: 50%;
   transform: translateX(-50%);
-
-  /* transform: translate3d(0, calc(var(--scrollTop) * 4), 0); */
   z-index: 15;
+
+  /* styling */
+  border: 2px solid var(--color-accent--lightest-trasparent);
+  outline: 1px solid var(--color-accent--lightest-trasparent);
+  border-radius: 50%;
+
+  /* animations/transitons */
+  transition: all 0.3s ease-in-out;
 }
 
 @media (max-width: 800px) {

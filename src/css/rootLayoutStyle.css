@@ -18,13 +18,14 @@
   --padding-bigger: 4.8rem;
   --padding-default: 3.2rem;
   --padding-smaller: 2.4rem;
-  --padding-smallest: 1.6rem;
+  --padding-smallest: 1.2rem;
   --padding-adaptive: calc(var(--sindex) * 2);
 
   /* SPACES--margins */
   --margin-bottom-bigest: calc(var(--index) * 15);
-  /* --margin-bottom-big: 19.2rem; */
-  --margin-bottom-big: 22.4rem;
+  /* --margin-bottom-big: 22.4rem; */
+  /* 22.4rem - 120px of section-nav-rootMargin */
+  --margin-bottom-big: 10.4rem;
   --margin-bottom-normal: 4.8rem;
   --margin-bottom-smaller: 2.4rem;
   --margin-bottom-smallest: 1.6rem;
@@ -69,7 +70,7 @@ html {
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   width: 100vw;
   background-color: var(--color-accent--lightest);
 
@@ -99,6 +100,7 @@ h2 {
   font-family: "Cabin", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  text-wrap: balance;
 }
 
 .title .title--span {
@@ -143,16 +145,29 @@ h2 {
   /* overflow: hidden; */
 }
 
-.hidden {
-  display: none;
-  opacity: 0;
-}
-
 @media (max-width: 600px) {
   .section {
     padding: var(--padding-adaptive);
     font-size: 1.6rem;
   }
+}
+
+.hidden {
+  display: none !important;
+  opacity: 0 !important;
+}
+
+.sticky {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+}
+
+.section-nav-rootMargin {
+  width: 100vw;
+  /* height: navbar height + 50% of its height */
+  height: 120px;
+  opacity: 0;
 }
 
 /* ----- GENERAL CLASSES ----- */
