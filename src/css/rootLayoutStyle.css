@@ -32,7 +32,7 @@
 
   /* SPACES--slider */
   --slider-height: calc(var(--index) * 20);
-  --slider-width: 90vw;
+  /* --slider-width: 90vw; */
   --slider-slide-width: 30vw;
   --slider-btn-width: 4.8rem;
   --slider-btn-height: 4.8rem;
@@ -46,7 +46,7 @@
   --color-navbar-bg-focus: rgba(218, 218, 218, 0.8);
   --color-navbar-border: rgba(6, 95, 19, 0.5);
   --color-text-primary: #181818;
-  --color-nearly-white: #fdfdfd; 
+  --color-nearly-white: #fdfdfd;
   --color-grey: #f1f3f5;
   --color-grey-trasparent: rgba(217, 217, 217, 0.2);
   --color-accent-darkest: #1b5c29;
@@ -67,6 +67,7 @@ html {
   /* seting it to % of user's settings: 10px / 16px = 0.625 === 62.5%*/
   /* so now 1rem === 10px */
   font-size: 62.5%;
+  overflow-x: hidden !important;
 }
 
 body {
@@ -159,8 +160,8 @@ h2 {
 
 .sticky {
   position: fixed !important;
-  top: 0;
-  left: 0;
+  top: 0 !important;
+  left: 0 !important;
 }
 
 .section-nav-rootMargin {

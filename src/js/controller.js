@@ -1,4 +1,17 @@
+
+
+/** -----> TO DO:
+ * rebuild sentence section
+ * style "focus" state
+ * style scroller tab
+ * 
+ */
+
+
+
+
 // ----- IMPORTS ----- //
+
 
 import "core-js/stable";
 import "regenerator-runtime/runtime";
@@ -102,3 +115,5 @@ const init = function () {
 };
 
 init();
+
+

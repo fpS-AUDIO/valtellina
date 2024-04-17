@@ -10,7 +10,7 @@
 
   /* size */
   width: 100vw;
-  height: 80px;
+  height: 80px !important;
 
   /* flexbox */
   display: flex;

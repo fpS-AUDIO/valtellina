@@ -584,7 +584,12 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"aenu9":[function(require,module,exports) {
-// ----- IMPORTS ----- //
+/** -----> TO DO:
+ * rebuild sentence section
+ * style "focus" state
+ * style scroller tab
+ * 
+ */ // ----- IMPORTS ----- //
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _webImmediateJs = require("core-js/modules/web.immediate.js");
 var _runtime = require("regenerator-runtime/runtime");

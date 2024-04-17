@@ -20,7 +20,6 @@
   --margin-bottom-smaller: 2.4rem;
   --margin-bottom-smallest: 1.6rem;
   --slider-height: calc(var(--index) * 20);
-  --slider-width: 90vw;
   --slider-slide-width: 30vw;
   --slider-btn-width: 4.8rem;
   --slider-btn-height: 4.8rem;
@@ -47,6 +46,7 @@
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden !important;
 }
 
 body {
@@ -133,9 +133,9 @@ h2 {
 }
 
 .sticky {
-  top: 0;
-  left: 0;
   position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
 }
 
 .section-nav-rootMargin {

@@ -8,6 +8,7 @@
 
 .animals-slider--wrapper .slider {
   width: var(--slider-width);
+  /* max-width: min(1700px, 100vw); */
   height: var(--slider-height);
   margin: 0 auto;
   position: relative;

@@ -34,10 +34,6 @@
   .features--section .features {
     grid-template-columns: 1fr;
   }
-
-  .features--section .features__feature {
-    padding: var(--padding-smallest);
-  }
 }
 
 .features--section .features__feature:hover, .features--section .features__feature:active {

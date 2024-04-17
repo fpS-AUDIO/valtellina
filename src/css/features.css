@@ -26,8 +26,6 @@
 @media (max-width: 800px) {
   .features--section .features {
     grid-template-columns: 1fr 1fr;
-    /* padding: var(--padding-default); */
-    /* gap: 1rem; */
   }
   .features--section .features__feature {
     padding: var(--padding-smallest);
@@ -36,9 +34,6 @@
 @media (max-width: 400px) {
   .features--section .features {
     grid-template-columns: 1fr;
-  }
-  .features--section .features__feature {
-    padding: var(--padding-smallest);
   }
 }
 
