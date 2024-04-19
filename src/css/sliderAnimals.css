@@ -111,7 +111,7 @@
 .animals-slider--wrapper .slider__btn {
   /* positioning and dimensions */
   position: absolute;
-  bottom: -15%;
+  bottom: 3%;
   height: var(--slider-btn-height);
   width: var(--slider-btn-width);
 
@@ -142,7 +142,7 @@
 
 .animals-slider--wrapper .dots {
   position: absolute;
-  bottom: -18%;
+  bottom: 1%;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -179,7 +179,7 @@
 .animals-slider--wrapper .slider-info {
   text-wrap: balance;
   position: absolute;
-  top: 25%;
+  top: 18%;
   left: 5%;
   max-width: var(--slider-slide-width);
   backdrop-filter: blur(5px);

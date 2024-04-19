@@ -5,10 +5,9 @@
 }
 
 .features--section .features {
-  padding: var(--padding-bigger);
+  padding: 0 var(--padding-bigger);
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 2.4rem;
-  max-width: min(1700px, 100vw);
   display: grid;
 }
 
@@ -20,17 +19,13 @@
   transition: all .3s ease-in-out;
 }
 
-@media (width <= 800px) {
+@media (width <= 1200px) {
   .features--section .features {
     grid-template-columns: 1fr 1fr;
   }
-
-  .features--section .features__feature {
-    padding: var(--padding-smallest);
-  }
 }
 
-@media (width <= 400px) {
+@media (width <= 500px) {
   .features--section .features {
     grid-template-columns: 1fr;
   }

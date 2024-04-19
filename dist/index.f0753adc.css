@@ -1,7 +1,8 @@
 .section.sentence-section {
   padding: calc(var(--index) * 3);
+  border-radius: var(--border-radius);
   box-shadow: var(--default-boxshadow);
-  background-image: url("sentences-bg.cc625e3b.webp");
+  background-image: linear-gradient(90deg, #1b5c2999 20%, #91d99f1a 100%), url("sentences-bg.cc625e3b.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -11,11 +12,19 @@
   display: flex;
   position: relative;
   overflow: hidden;
+  overflow: visible !important;
+}
+
+@media (width <= 1700px) {
+  .section.sentence-section {
+    border-radius: 0;
+  }
 }
 
 .sentence-section .title-wrapper {
   padding: var(--padding-bigger);
   backdrop-filter: blur(1px);
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
   background-color: #fffc;
   max-width: 75%;
   position: absolute;

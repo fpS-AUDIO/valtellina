@@ -1,17 +1,11 @@
-
-
 /** -----> TO DO:
  * rebuild sentence section
  * style "focus" state
  * style scroller tab
- * 
+ *
  */
 
-
-
-
 // ----- IMPORTS ----- //
-
 
 import "core-js/stable";
 import "regenerator-runtime/runtime";
@@ -26,6 +20,35 @@ import navView from "./views/navView.js";
 // }
 
 // ----- HELPER FUNCTIONS ----- //
+
+const findBiggerElement = function () {
+  // FUNCTION HELPS FIND OVERFLOW-X ELEMENT
+  // get the width of the body
+  const bodyWidthStr = window.getComputedStyle(document.body).width;
+  const bodyWidthStrInt = parseInt(bodyWidthStr);
+
+  // selecting every element
+  const everithing = document.querySelectorAll(`*`);
+
+  console.log(`The width of body is: ${bodyWidthStrInt}px`);
+
+  everithing.forEach((el) => {
+    const computedStyle = window.getComputedStyle(el);
+    const width = parseInt(computedStyle.width);
+    // Get all computed styles of the element
+    console.log(`Analazing element with width of ${width}px: ${el}`);
+    if (width > bodyWidthStrInt) {
+      console.log(`🆘🆘🆘 ----- BIGGER WIDTH -----:`);
+      console.dir(el);
+      return;
+    }
+
+    if (width === bodyWidthStrInt) {
+      console.log(`⚠️⚠️⚠️ ----- SAME WIDTH -----:`);
+      console.dir(el);
+    }
+  });
+};
 
 const updateCurrentSlide = function (currentSl) {
   model.state.slider.currentSlide = currentSl;
@@ -112,8 +135,6 @@ const init = function () {
   SliderAnimal.addHandlerControlDotsButtons(mainChangeSlideControl);
   navView.addHandlerNavLinks();
   navView.addHandlerStickNavbar();
+  // findBiggerElement();
 };
-
 init();
-
-

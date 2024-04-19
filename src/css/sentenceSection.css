@@ -1,16 +1,25 @@
 .section.sentence-section {
   /* size and position */
+  position: relative;
   padding: calc(var(--index) * 3);
   height: 45svh;
-  position: relative;
   overflow: hidden;
+  overflow: visible !important;
 
   /* styling */
-  background-image: url("../img/sentences-bg.webp");
+  background-image: linear-gradient(
+      90deg,
+      rgba(27, 92, 41, 0.6) 20%,
+      rgba(145, 217, 159, 0.1) 100%
+    ),
+    url("../img/sentences-bg.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  border-radius: var(--border-radius);
   box-shadow: var(--default-boxshadow);
+
+  /* clip-path: polygon(0% 15%, 100% 0%, 100% 85%, 0% 100%); */
 
   /* flexbox */
   display: flex;
@@ -18,14 +27,37 @@
   justify-content: center;
 }
 
+/* .section.sentence-section::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  transform: translate(25%, 25%);
+  z-index: -10;
+  width: 20%;
+  padding-bottom: 20%;
+  border-radius: 50%;
+  background-color: var(--color-accent-lighter-transparent);
+} */
+
+@media (max-width: 1700px) {
+  .section.sentence-section {
+    border-radius: 0;
+  }
+}
+
 .sentence-section .title-wrapper {
   position: absolute;
   top: 30%;
   left: 0;
   max-width: 75%;
+
   padding: var(--padding-bigger);
   background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(1px);
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  /* transform: rotate(-10deg); */
 }
 
 @media (max-width: 600px) {

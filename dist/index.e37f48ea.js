@@ -588,7 +588,7 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
  * rebuild sentence section
  * style "focus" state
  * style scroller tab
- * 
+ *
  */ // ----- IMPORTS ----- //
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _webImmediateJs = require("core-js/modules/web.immediate.js");
@@ -605,6 +605,30 @@ var _navViewJsDefault = parcelHelpers.interopDefault(_navViewJs);
 //   module.hot.accept();
 // }
 // ----- HELPER FUNCTIONS ----- //
+const findBiggerElement = function() {
+    // FUNCTION HELPS FIND OVERFLOW-X ELEMENT
+    // get the width of the body
+    const bodyWidthStr = window.getComputedStyle(document.body).width;
+    const bodyWidthStrInt = parseInt(bodyWidthStr);
+    // selecting every element
+    const everithing = document.querySelectorAll(`*`);
+    console.log(`The width of body is: ${bodyWidthStrInt}px`);
+    everithing.forEach((el)=>{
+        const computedStyle = window.getComputedStyle(el);
+        const width = parseInt(computedStyle.width);
+        // Get all computed styles of the element
+        console.log(`Analazing element with width of ${width}px: ${el}`);
+        if (width > bodyWidthStrInt) {
+            console.log(`\u{1F198}\u{1F198}\u{1F198} ----- BIGGER WIDTH -----:`);
+            console.dir(el);
+            return;
+        }
+        if (width === bodyWidthStrInt) {
+            console.log(`\u{26A0}\u{FE0F}\u{26A0}\u{FE0F}\u{26A0}\u{FE0F} ----- SAME WIDTH -----:`);
+            console.dir(el);
+        }
+    });
+};
 const updateCurrentSlide = function(currentSl) {
     _modelJs.state.slider.currentSlide = currentSl;
 };
@@ -664,6 +688,7 @@ const init = function() {
     (0, _sliderAnimalsViewJsDefault.default).addHandlerControlDotsButtons(mainChangeSlideControl);
     (0, _navViewJsDefault.default).addHandlerNavLinks();
     (0, _navViewJsDefault.default).addHandlerStickNavbar();
+// findBiggerElement();
 };
 init();
 
