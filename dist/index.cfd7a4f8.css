@@ -80,6 +80,10 @@ h2 {
   font-weight: 600;
 }
 
+strong {
+  font-weight: 600;
+}
+
 .title {
   color: var(--color-text-primary);
   text-align: center;
@@ -102,6 +106,14 @@ h2 {
 .title--secondary {
   letter-spacing: calc(var(--index) / 5);
   font-size: calc(var(--index) * 1.4);
+}
+
+.title--terciary {
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  text-align: left;
+  color: var(--color-accent-darker);
+  font-weight: 800;
 }
 
 .margin-botton-bigest {
@@ -130,13 +142,6 @@ h2 {
   font-size: 1.6rem;
 }
 
-@media (width <= 600px) {
-  .section {
-    padding: var(--padding-adaptive);
-    font-size: 1.6rem;
-  }
-}
-
 .hidden {
   opacity: 0 !important;
   display: none !important;
@@ -146,6 +151,15 @@ h2 {
   opacity: 0;
   width: 100vw;
   height: 120px;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-cols--2 {
+  grid-template-columns: 1fr 1fr;
+  row-gap: 4.8rem;
 }
 
 .noSelect {

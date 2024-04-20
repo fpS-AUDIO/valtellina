@@ -1,8 +1,8 @@
 .section.sentence-section {
   padding: calc(var(--index) * 3);
   border-radius: var(--border-radius);
-  box-shadow: var(--default-boxshadow);
-  background-image: linear-gradient(90deg, #1b5c2999 20%, #91d99f1a 100%), url("sentences-bg.cc625e3b.webp");
+  clip-path: polygon(0% 15%, 100% 0%, 100% 85%, 0% 100%);
+  background-image: linear-gradient(90deg, #1b5c2999 20%, #91d99f1a 100%), url("sentences-bg-2.8b240475.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

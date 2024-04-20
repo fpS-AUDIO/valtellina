@@ -1,0 +1,2 @@
+@media (width<=600px){.section{padding:var(--padding-adaptive);font-size:1.6rem}}@media (width<=1000px){.grid.grid-cols--2{grid-template-columns:1fr;row-gap:4.8rem}.grid.grid-cols--2 div:nth-child(4){grid-row:3}.grid.grid-cols--2 div:nth-child(8){grid-row:7}}
+/*# sourceMappingURL=index.e0a600c3.css.map */

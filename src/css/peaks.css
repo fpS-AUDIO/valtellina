@@ -1,0 +1,26 @@
+.section--peaks .grid > * {
+  padding: var(--padding-default);
+  max-height: 50rem;
+}
+.section--peaks .description-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 0.8rem;
+}
+.section--peaks .image--peak {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  box-shadow: var(--default-boxshadow);
+}
+
+.section--peaks .description--ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 0.8rem;
+  padding-top: var(--margin-bottom-smallest);
+}

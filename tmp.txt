@@ -32,52 +32,43 @@ Description: Discover the craftsmanship of Valtellina through its local products
 Icon: Spa
 Title: Wellness Retreats
 Description: Unwind in the tranquility of Valtellina's spa towns. Natural thermal waters, surrounded by stunning landscapes, offer a perfect escape for relaxation and rejuvenation.
-9. Architectural Wonders
-Icon: Church
-Title: Architectural Wonders
-Description: Marvel at the architectural beauty of Valtellina, from the Romanesque simplicity of its ancient churches to the elegance of its noble palaces.
 
 =====================================================================
 
+Best Mountains for Hiking and Outdoor Activities in Valtellina
+Explore the rugged beauty of Valtellina through its exceptional hiking and outdoor trails. Whether you're a seasoned hiker looking for a challenge or a casual visitor wanting to enjoy serene landscapes, these mountains offer an unforgettable experience with their unique trails, diverse ecosystems, and breathtaking views.
 
+Monte Sobretta
+Altitude: 2,802 meters
+Location: Close to Santa Caterina Valfurva
+Difficulty: Moderate to Challenging
+Trail Highlights:
+Verde Pass Route: A scenic trail that winds through dense forests and alpine meadows, ideal for spotting the diverse alpine flora including Edelweiss and Alpine Anemones.
+Panoramic Views: Offers views over the Ortles and Adamello ranges.
+Best Time to Visit: June to September for hiking. November to April for snowshoeing.
 
+Pizzo di Coca
+Altitude: 3,052 meters
+Location: Northern end of the Bergamasque Alps
+Difficulty: Challenging
+Trail Highlights:
+Coca Climb: A demanding hike that ascends sharply through rocky terrains and ends at the summit with awe-inspiring views of the surrounding glaciers.
+Glacial Features: Experience close encounters with the remnants of ancient glaciers.
+Best Time to Visit: July to early September, when the snow levels are typically lower and trails are clearer.
 
-1. Interactive Map of Valtellina
-Description: Implement an interactive map highlighting key attractions, hiking trails, vineyards, and historical sites. Users can click on different areas to learn more about each location.
-Implementation: Use a library like Leaflet.js for the map and customize markers for different types of attractions.
+Stelvio National Park Peaks
+Location: Stelvio National Park encompasses several peaks with a variety of trails.
+Difficulty: Varies from Easy to Difficult
+Trail Highlights:
+Multiple Peaks: Explore Monte Scorluzzo, Cima Piazzi, or Punta San Matteo each offering unique landscapes from lush meadows to rugged rock formations.
+Biodiversity: Home to a range of wildlife including red deer, ibex, and golden eagles.
+Best Time to Visit: Year-round, with specific trails more suitable in summer or winter depending on the activity.
 
-2. 360° Virtual Tours
-Description: Offer immersive virtual tours of iconic locations within Valtellina, such as the terraced vineyards, the Stelvio National Park, or the Bernina Express route.
-Implementation: Integrate 360-degree images or videos using A-Frame, a web framework for building virtual reality experiences.
-
-3. Cultural and Historical Insights
-Description: Create a section dedicated to the rich culture and history of Valtellina, including traditional crafts, local legends, and historical events.
-Implementation: Design this section with a mix of text, photos, and perhaps timeline animations to illustrate the valley's past.
-
-4. Local Recipes and Cuisine
-Description: Showcase the gastronomy of Valtellina, with recipes, food pairing suggestions (especially with Valtellina wines), and featured local products like bresaola, pizzoccheri, and Bitto cheese.
-Implementation: Use a card layout to present various recipes and products, each leading to a detailed page with ingredients, cooking steps, and pairing options.
-
-5. Event Calendar
-Description: Integrate an events calendar highlighting upcoming festivals, markets, and activities in Valtellina, encouraging users to plan their visits around these events.
-Implementation: Develop a dynamic calendar feature where users can filter events by category (e.g., food, sports, music) and add them to their personal itinerary.
-
-6. Weather Forecast and Tips
-Description: Provide current weather conditions and forecasts for different areas within Valtellina, along with tips for outdoor activities suitable for the weather.
-Implementation: Use a weather API to fetch real-time data and suggest activities (e.g., vineyard tours for sunny days, museum visits for rainy days).
-
-7. Hiking Trail Recommendations
-Description: Detail popular hiking trails with difficulty ratings, expected durations, points of interest along the way, and safety tips.
-Implementation: Display trails using interactive elements, possibly integrating with the interactive map, and allow users to download trail maps or GPX files.
-
-8. Community Section
-Description: Encourage user interaction by allowing visitors to share their own stories, photos, and tips from their visit to Valtellina.
-Implementation: Create a moderated submission form for stories and a gallery for user-submitted photos, with features to like and comment on posts.
-
-9. Language Support
-Description: To make your application more accessible to international tourists, offer content in multiple languages, including Italian, English, and German.
-Implementation: Implement i18n (internationalization) in your front-end framework to manage multilingual content.
-
-10. Accessibility Features
-Description: Ensure your web application is accessible to all users, including those with disabilities.
-Implementation: Follow WCAG guidelines, offering text alternatives for non-text content, ensuring keyboard navigability, and providing options to adjust text sizes and color contrasts.
+Monte Torena
+Altitude: 2,435 meters
+Location: Near Bormio
+Difficulty: Moderate
+Trail Highlights:
+Torena Loop: A circular trail that offers varied terrain, ideal for both summer hiking and winter snowshoeing.
+Cultural Sites: Passes by traditional 'baita' (mountain huts) and old military roads.
+Best Time to Visit: All year. Summer for hiking and winter for snowshoeing.
