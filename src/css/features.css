@@ -23,18 +23,6 @@
   max-width: 400px;
 }
 
-@media (max-width: 1200px) {
-  .features--section .features {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 500px) {
-  .features--section .features {
-    grid-template-columns: 1fr;
-  }
-}
-
 .features--section .features__feature:hover,
 .features--section .features__feature:active {
   transform: scale(1.1);
@@ -53,8 +41,3 @@
   letter-spacing: 0.1rem;
 }
 
-@media (max-width: 600px) {
-  .features--section .feature--description {
-    font-size: var(--font-size-smallscreens);
-  }
-}

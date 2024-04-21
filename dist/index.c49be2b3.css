@@ -81,13 +81,6 @@
   transform: translateX(-50%);
 }
 
-@media (width <= 800px) {
-  .header-container .scroll-down-btn--link {
-    width: 3.2rem;
-    height: 3.2rem;
-  }
-}
-
 .header-container .scroll-down-btn--img {
   object-fit: contain;
   width: 100%;

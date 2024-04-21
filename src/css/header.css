@@ -98,12 +98,6 @@
   transition: all 0.3s ease-in-out;
 }
 
-@media (max-width: 800px) {
-  .header-container .scroll-down-btn--link {
-    width: 3.2rem;
-    height: 3.2rem;
-  }
-}
 
 .header-container .scroll-down-btn--img {
   width: 100%;

@@ -1,8 +1,8 @@
 /** -----> TO DO:
- * rebuild sentence section
  * style "focus" state
  * style scroller tab
- *
+ * add icons to iOS and Android
+ * refactor media queries
  */
 
 // ----- IMPORTS ----- //

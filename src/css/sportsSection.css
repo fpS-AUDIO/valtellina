@@ -166,17 +166,3 @@
     ),
     url("../img/sports/sports--golf.webp");
 }
-
-@media (max-width: 600px) {
-  .card > .row > .description {
-    display: inline-block;
-    font-size: var(--font-size-smallscreens);
-    padding: calc(var(--padding-adaptive) * 0.4);
-  }
-
-  .card > .row > .icon {
-    /* as child of .row container grid: */
-    justify-self: center;
-    align-self: end;
-  }
-}

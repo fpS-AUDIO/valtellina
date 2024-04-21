@@ -14,8 +14,8 @@
   --padding-smaller: 2.4rem;
   --padding-smallest: 1.2rem;
   --padding-adaptive: calc(var(--index) * 2);
-  --margin-bottom-bigest: calc(var(--index) * 15);
-  --margin-bottom-big: calc(var(--index) * 5);
+  --margin-bottom-bigest: calc(var(--index) * 8);
+  --margin-bottom-big: 6.4rem;
   --margin-bottom-normal: 4.8rem;
   --margin-bottom-smaller: 2.4rem;
   --margin-bottom-smallest: 1.6rem;
@@ -100,7 +100,7 @@ strong {
 .title--primary {
   letter-spacing: calc(var(--index) / 4);
   text-transform: uppercase;
-  font-size: calc(var(--index) * 1.5);
+  font-size: calc(var(--index) * 1.4);
 }
 
 .title--secondary {
@@ -160,6 +160,11 @@ strong {
 .grid-cols--2 {
   grid-template-columns: 1fr 1fr;
   row-gap: 4.8rem;
+}
+
+.grid > * {
+  padding: var(--padding-default);
+  max-height: 50rem;
 }
 
 .noSelect {

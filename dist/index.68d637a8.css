@@ -106,16 +106,4 @@
 .card[for="c6"] {
   background-image: linear-gradient(0deg, #000000e6 10%, #ffffff1a 100%), url("sports--golf.36894197.webp");
 }
-
-@media (width <= 600px) {
-  .card > .row > .description {
-    font-size: var(--font-size-smallscreens);
-    padding: calc(var(--padding-adaptive) * .4);
-    display: inline-block;
-  }
-
-  .card > .row > .icon {
-    place-self: end center;
-  }
-}
 /*# sourceMappingURL=index.68d637a8.css.map */

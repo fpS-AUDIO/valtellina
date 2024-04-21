@@ -1,7 +1,3 @@
-.section--peaks .grid > * {
-  padding: var(--padding-default);
-  max-height: 50rem;
-}
 .section--peaks .description-box {
   display: flex;
   flex-direction: column;

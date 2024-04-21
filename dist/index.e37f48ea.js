@@ -585,10 +585,10 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 
 },{}],"aenu9":[function(require,module,exports) {
 /** -----> TO DO:
- * rebuild sentence section
  * style "focus" state
  * style scroller tab
- *
+ * add icons to iOS and Android
+ * refactor media queries
  */ // ----- IMPORTS ----- //
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _webImmediateJs = require("core-js/modules/web.immediate.js");
