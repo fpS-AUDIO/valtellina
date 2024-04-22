@@ -23,7 +23,7 @@
 
 .footer .disclaimer {
   z-index: 8;
-  padding: var(--padding-default);
+  padding: var(--padding-bigger);
   background-color: var(--color-accent-darker);
   font-size: 1.6rem;
 }

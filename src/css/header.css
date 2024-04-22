@@ -60,10 +60,9 @@
 }
 
 .header-container .layer__caption {
-  margin-top: -12.8rem;
+  /* margin-top: -12.8rem;*/
   position: relative;
-  /* text-align: center; */
-  /* margin-top: -16rem; */
+  transform: translateY(-100%);
 }
 
 .header-container .title--primary {
@@ -97,7 +96,6 @@
   /* animations/transitons */
   transition: all 0.3s ease-in-out;
 }
-
 
 .header-container .scroll-down-btn--img {
   width: 100%;

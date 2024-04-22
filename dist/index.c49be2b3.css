@@ -57,8 +57,8 @@
 }
 
 .header-container .layer__caption {
-  margin-top: -12.8rem;
   position: relative;
+  transform: translateY(-100%);
 }
 
 .header-container .title--primary, .header-container .title--secondary {

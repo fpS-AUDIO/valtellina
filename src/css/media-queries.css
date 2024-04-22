@@ -36,6 +36,12 @@
 // @MEDIA MAX-WIDTH: 800PX //
 ////////////////////////////*/
 @media (max-width: 800px) {
+  /* ----- HEADER ----- */
+  .header-container .scroll-down-btn--link {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+
   /* ----- NAVBAR ----- */
   .nav .nav__links {
     /* size and position */
@@ -90,6 +96,7 @@
   }
   .grid > * {
     padding: var(--margin-bottom-smaller);
+    max-height: 60rem;
   }
 }
 
@@ -97,7 +104,34 @@
 // @MEDIA MAX-WIDTH: 600PX //
 ////////////////////////////*/
 @media (max-width: 600px) {
+  /* ----- FEATURE SECTION ----- */
   .features--section .features {
     grid-template-columns: 1fr;
+  }
+  .features--section .features {
+    padding: 0 var(--padding-smaller);
+  }
+
+  /* ----- ANIMALS SLIDER SECTION ----- */
+  .animals-slider--wrapper .slider-info {
+    padding: var(--padding-smallest);
+    font-size: var(--font-size-smallscreens);
+  }
+  .animals-slider--wrapper .dots__dot {
+    height: var(--slider-dot-height-smallscreen);
+    width: var(--slider-dot-width-smallscreen);
+  }
+
+  /* ----- SPORTS SECTION ----- */
+  .card > .row > .description {
+    display: inline-block;
+    font-size: var(--font-size-smallscreens);
+    padding: calc(var(--padding-adaptive) * 0.4);
+  }
+
+  .card > .row > .icon {
+    /* as child of .row container grid: */
+    justify-self: center;
+    align-self: end;
   }
 }
