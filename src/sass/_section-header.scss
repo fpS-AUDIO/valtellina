@@ -1,0 +1,99 @@
+.header-container {
+  position: relative;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    z-index: 15;
+    width: 100%;
+    height: calc(var(--index) * 18);
+    background-image: url("../img/after-header.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    bottom: calc(var(--index) * -8);
+    filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.5));
+  }
+
+  .layers {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .layer__header {
+      z-index: 1;
+      transform: translate3d(0, calc(var(--scrollTop) / 1.2), 0);
+      /* mix-blend-mode: hard-light; */
+
+      .layer__caption {
+        /* margin-top: -12.8rem;*/
+        position: relative;
+        transform: translateY(-100%);
+
+        .title {
+          color: $color-nearly-white;
+          text-shadow: 0 0 2px#000000;
+        }
+      }
+    }
+
+    .layer {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+      /* hardware priority to transform */
+      will-change: transform;
+      z-index: 2;
+
+      &--base {
+        background-image: url("../img/layer-base.webp");
+        /* translate3d(X, Y, Z */
+        transform: translate3d(0, calc(var(--scrollTop) / 1.5), 0);
+        z-index: 0;
+      }
+
+      &--middle {
+        background-image: url("../img/layer-middle.webp");
+        transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
+      }
+
+      &--front {
+        background-image: url("../img/layer-front.webp");
+        transform: translate3d(0, calc(var(--scrollTop) / 8), 0);
+
+        .scroll-down-btn--link {
+          /* size */
+          display: inline-block;
+          width: 4.2rem;
+          height: 4.2rem;
+
+          /* position */
+          position: absolute;
+          bottom: 35svh;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 15;
+
+          /* styling */
+          border: 2px solid $color-accent--lightest-trasparent;
+          outline: 1px solid $color-accent--lightest-trasparent;
+          border-radius: 50%;
+
+          /* animations/transitons */
+          transition: all 0.3s ease-in-out;
+
+          .scroll-down-btn--img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+  }
+}

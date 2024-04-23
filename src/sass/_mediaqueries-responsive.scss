@@ -1,0 +1,157 @@
+/*////////////////////////////
+// @MEDIA MAX-WIDTH: 1200PX //
+////////////////////////////*/
+@media (max-width: 1200px) {
+  /* ----- ROOOT ----- */
+  html {
+    font-size: 56.25%;
+  }
+
+  /* ----- NAVBAR ----- */
+  .nav {
+    /* nav--position and size */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    clip-path: none;
+
+    /* nav--flexbox */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    /* nav--styling*/
+    border-radius: 0;
+    padding: 0.8rem 8% 0.8rem 5%;
+  }
+
+  /* ----- FEATURES SECTION ----- */
+  .features--section .features {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/*////////////////////////////
+// @MEDIA MAX-WIDTH: 800PX //
+////////////////////////////*/
+@media (max-width: 800px) {
+  /* ----- ROOT ----- */
+  .margin-botton-bigest {
+    margin-bottom: 15vh;
+  }
+
+  /* ----- HEADER ----- */
+  .header-container .scroll-down-btn--link {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+
+  /* ----- NAVBAR ----- */
+  .nav {
+    .nav__links {
+      /* size and position */
+      position: absolute;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      height: 0;
+
+      /* flexbox */
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+
+      /* styling */
+      opacity: 0;
+      background-color: $color-navbar-bg;
+      backdrop-filter: blur(3px);
+
+      transition: all 0.2s ease-in-out;
+    }
+
+    .menu-icon {
+      display: inline-block;
+
+      .nav-icon {
+        display: block;
+      }
+    }
+
+    .menu-btn:checked ~ .nav__links {
+      height: auto;
+      opacity: 1;
+    }
+  }
+
+  /* ----- GRID ----- */
+  .grid.grid__cols--2 {
+    grid-template-columns: 1fr;
+    row-gap: 0;
+
+    div:nth-child(4) {
+      grid-row: 3;
+    }
+
+    div:nth-child(8) {
+      grid-row: 7;
+    }
+  }
+
+  .grid {
+    > .description-box:not(:last-child) {
+      margin-bottom: $margin-bottom-normal;
+    }
+
+    > * {
+      padding: $margin-bottom-smaller;
+      max-height: 60rem;
+    }
+  }
+}
+
+/*////////////////////////////
+// @MEDIA MAX-WIDTH: 600PX //
+////////////////////////////*/
+@media (max-width: 600px) {
+    /* ----- ROOT ----- */
+    .margin-botton-bigest {
+      margin-bottom: 10vh;
+    }
+  
+  /* ----- FEATURE SECTION ----- */
+  .features--section .features {
+    grid-template-columns: 1fr;
+    padding: 0 $padding-smaller;
+  }
+
+  /* ----- ANIMALS SLIDER SECTION ----- */
+  .animals-slider--wrapper {
+    .slider-info {
+      padding: $padding-smallest;
+      font-size: $font-size-smallscreens;
+    }
+
+    .dots__dot {
+      height: $slider-dot-height-smallscreen;
+      width: $slider-dot-width-smallscreen;
+    }
+  }
+
+  /* ----- SPORTS SECTION ----- */
+  .card > .row {
+    > .description {
+      display: inline-block;
+      font-size: $font-size-smallscreens !important;
+      // padding: calc(var(--padding-adaptive) * 0.4);
+      padding: $padding-smallest !important;
+    }
+
+    > .icon {
+      /* as child of .row container grid: */
+      justify-self: center;
+      align-self: end;
+    }
+  }
+}

@@ -1,0 +1,164 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* just for debugging */
+  /* outline: 1px solid saddlebrown; */
+}
+
+html {
+  /* avoiding fixed font-size to allow user set their font-size */
+  /* font-size: 10px; */
+  /* seting it to % of user's settings: 10px / 16px = 0.625 === 62.5%*/
+  /* so now 1rem === 10px */
+  font-size: 62.5%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  max-width: 100vw;
+  background-color: $color-accent--lightest;
+
+  /* font */
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: $color-text-primary;
+  font-style: normal;
+  line-height: 1.2;
+
+  main {
+    position: relative;
+    max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 2.9rem;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+
+  strong {
+    font-weight: 600;
+  }
+}
+
+/* ----- TITLE CLASSES ----- */
+
+.title {
+  color: $color-text-primary;
+  text-align: center;
+  font-family: "Cabin", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  text-wrap: balance;
+  max-width: 170rem;
+
+  .title--span {
+    color: $color-accent-darker;
+  }
+
+  &--primary {
+    letter-spacing: calc(var(--index) / 4);
+    text-transform: uppercase;
+    font-size: calc(var(--index) * 1.4);
+  }
+  &--secondary {
+    letter-spacing: calc(var(--index) / 5);
+    font-size: calc(var(--index) * 1.4);
+  }
+  &--terciary {
+    text-transform: uppercase;
+    letter-spacing: 1.2;
+    font-weight: 800;
+    text-align: left;
+    color: $color-accent-darker;
+  }
+}
+
+/* ----- MARGIN CLASSES ----- */
+
+.margin-botton-bigest {
+  margin-bottom: $margin-bottom-bigest;
+}
+.margin-botton-big {
+  margin-bottom: $margin-bottom-big;
+}
+.margin-botton-normal {
+  margin-bottom: $margin-bottom-normal;
+}
+.margin-botton-smaller {
+  margin-bottom: $margin-bottom-smaller;
+}
+.margin-botton-smallest {
+  margin-bottom: $margin-bottom-smallest;
+}
+
+/* ----- SECTION CLASSES ----- */
+
+.section {
+  padding: $padding-default;
+  font-size: 1.6rem;
+  /* max-width: 100vw; */
+  width: MIN(1700px, 100vw);
+  /* overflow: hidden; */
+}
+
+.hidden {
+  display: none !important;
+  opacity: 0 !important;
+}
+
+.section-nav-rootMargin {
+  width: 100vw;
+  /* height: navbar height + 50% of its height */
+  height: 120px;
+  opacity: 0;
+}
+
+.grid {
+  display: grid;
+
+  > * {
+    padding: $padding-default;
+    max-height: 50rem;
+  }
+
+  &__cols--2 {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 4.8rem;
+  }
+}
+
+/* ----- GENERAL CLASSES ----- */
+
+.noSelect {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  &:focus {
+    outline: none !important;
+  }
+}
+
+.container--centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

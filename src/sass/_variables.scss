@@ -1,0 +1,58 @@
+:root {
+  --index: calc(1vw + 1vh);
+}
+
+/* SPACING SYSTEM (px): 2, 4, 8, 12, 16, 24, 32, 48, 64, 80, 96, 128, 160, 192, 224  */
+
+$border-radius: 2rem;
+$font-size-smallscreens: 1.4rem;
+// $font-size-smallscreens-title: calc($index * 1.5);
+// $font-size-smallscreens-title: #{calc($index * 1.5)};
+// $font-size-title-primary: 2.5rem;
+// $font-size-title-secondary: 2rem;
+
+/* SPACES--paddings */
+$padding-bigger: 4.8rem;
+$padding-default: 3.2rem;
+$padding-smaller: 2.4rem;
+$padding-smallest: 1.2rem;
+
+/* SPACES--margins */
+$margin-bottom-bigest: 20vh;
+/* $margin-bottom-big: 22.4rem; 22.4rem - 120px of section-nav-rootMargin */
+$margin-bottom-big: 6.4rem;
+$margin-bottom-normal: 4.8rem;
+$margin-bottom-smaller: 2.4rem;
+$margin-bottom-smallest: 1.6rem;
+
+/* SPACES--slider */
+$slider-height: 40svh;
+$slider-width: 100%;
+$slider-slide-width: 33%;
+$slider-btn-width: 4.8rem;
+$slider-btn-height: 4.8rem;
+$slider-dot-height: 1.6rem;
+$slider-dot-width: 1.6rem;
+// $slider-dot-height-smallscreen: calc($index * 0.9);
+// $slider-dot-width-smallscreen: calc($index * 0.9);
+$slider-dot-height-smallscreen: 1.2rem;
+$slider-dot-width-smallscreen: 1.2rem;
+
+/* main colors */
+$color-navbar-bg: rgba(218, 218, 218, 0.6);
+$color-navbar-bg-focus: rgba(218, 218, 218, 0.8);
+$color-navbar-border: rgba(6, 95, 19, 0.5);
+$color-text-primary: #181818;
+$color-nearly-white: #fdfdfd;
+$color-grey: #f1f3f5;
+$color-grey-trasparent: rgba(217, 217, 217, 0.2);
+$color-accent-darkest: #1b5c29;
+$color-accent-darker: #2f9e44;
+$color-accent: #40c057;
+$color-accent-lighter: rgb(178, 242, 187); /* #b2f2bb */
+$color-accent-lighter-transparent: rgba(178, 242, 187, 0.3);
+$color-accent--lightest: #f7fcf7;
+$color-accent--lightest-trasparent: rgba(247, 252, 247, 0.6);
+
+$default-boxshadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+  rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
